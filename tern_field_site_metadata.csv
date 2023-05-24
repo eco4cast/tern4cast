@@ -1,0 +1,15 @@
+site,site_id,fluxnet_id,latitude,longitude,elevation,mat,map,world_ecoregion, data_url
+Alice Springs Mulga,AASM,AU-ASM,-22.2828,133.2493,606,22.8,331,Deserts and xeric shrublands, https://dap.ozflux.org.au/thredds/dodsC/ozflux/sites/AliceSpringsMulga/L3/neon_efi/AliceSpringsMulga_L3_EFI.nc
+Boyagin,ABOY,AU-Boy,-32.4771,116.9386,484,,,, https://dap.ozflux.org.au/thredds/dodsC/ozflux/sites/Boyagin/L3/neon_efi/Boyagin_L3_EFI.nc
+Calperum,ACPR,AU-Cpr,-34.0027,140.5877,60,17.9,301,Mediterranean woodlands, https://dap.ozflux.org.au/thredds/dodsC/ozflux/sites/Calperum/L3/neon_efi/Calperum_L3_EFI.nc
+Cumberland Plains,ACUM,AU-Cum,-33.6152,150.7236,20,18.1,806,Temperate woodlands,
+Fletcherview,AFLE,AU-Fle,-19.8873,146.1891,260,,,,
+Gingin,AGIN,AU-Gin,-31.3764,115.7139,51,18.7,547,Mediterranean woodlands,
+Great Western Woodlands,AGWW,AU-GWW,-30.1913,120.6541,385,19.9,361,Mediterranean woodlands,
+Litchfield,ALIT,AU-Lit,-13.1790,130.7945,222,,,Tropical savannas,
+Robson Creek,AROB,AU-Rob,-17.1175,145.6301,710,20.1,2199,Tropical and sub-tropical moist broadleaf forests,
+Samford,ASAM,AU-Sam,-27.3888,152.8725,69,19.4,1241,Pasture,
+Tumbarumba,ATUM,AU-Tum,-35.6566,148.1517,1200,9.6,1924,Temperate broadleaf and mixed forest,
+Warra,AWRR,AU-Wrr,-43.0950,146.6545,100,10.0,1053,Temperate broadleaf and mixed forest,
+Whroo,AWHR,AU-Whr,-36.6732,145.0294,165,16.0,381,Temperate woodlands,
+Wombat State Forest,AWOM,AU-Wom,-37.4222,144.0944,705,11.4,924,Temperate broadleaf forest,

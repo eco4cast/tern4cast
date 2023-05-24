@@ -1,0 +1,103 @@
+---
+title: "Terrestrial"
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
+```
+
+```{r setup}
+library(ggiraph)
+library(patchwork)
+library(tidyverse)
+library(neon4cast)
+library(score4cast)
+library(glue)
+source("R/plot-utils.R")
+score4cast::ignore_sigpipe()
+
+
+```
+
+# Daily averages
+
+```{r }
+theme <- "terrestrial_daily"
+cutoff <- as.character(Sys.Date() - 30)
+combined <- arrow::open_dataset(glue("cache/parquet/{theme}")) |>
+  filter(date >= cutoff) |> collect()
+
+```
+
+
+
+
+
+```{r}
+sites <- combined |> distinct(site_id) |> collect() |> slice_head(n= 6) |> pull(site_id)
+## with at least n observations to compare!
+n_data <- 10
+who <- combined |> filter(!is.na(observation)) |> summarise(has_data = max(reference_datetime)) |> collect()
+ref <- as.character ( as.Date(who$has_data[[1]]) - n_data )
+ex <- combined |> filter(reference_datetime == ref, site_id %in% sites) 
+
+```
+
+## Most recent forecasts
+
+Below is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.
+
+::: panel-tabset
+## Latent evaporation
+
+```{r}
+ex |> filter(reference_datetime == ref, variable == "le") |> forecast_plots()
+```
+
+## CO2 Flux
+
+Net ecosystem exchange of CO2 (NEE)
+
+```{r}
+ex |> filter(reference_datetime == ref, variable == "nee") |> forecast_plots()
+```
+
+## vswc
+
+```{r}
+ ex |> filter(reference_datetime == ref, variable == "vswc") |> forecast_plots()
+```
+:::
+
+
+## Leaderboard
+
+Average skill scores of each model across all sites.  
+Scores are shown by reference date and forecast horizon (in days).  
+Scores are averaged across all submissions of the model with a given horizon or a given `reference_datetime` out of submissions made since cutoff date.
+
+```{r include=TRUE}
+cutoff
+```
+
+::: panel-tabset
+## Latent evaporation
+
+```{r}
+leaderboard_plots(combined, "le")
+```
+
+## CO2 flux
+
+```{r}
+leaderboard_plots(combined, "nee")
+```
+
+## vswc
+
+(no data)
+
+```{r}
+# leaderboard_plots(combined, "vswc")
+```
+:::
