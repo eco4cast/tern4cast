@@ -25,7 +25,7 @@ jobs:
           
       - name: Build inventory
         shell: Rscript {0}
-      - run: |
+        run: |
           score4cast::efi_update_inventory(bucket_name = "tern4cast-forecasts")
 
       - name: Update GEFS
