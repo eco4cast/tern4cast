@@ -23,6 +23,7 @@ jobs:
         shell: Rscript {0}
         run: |
           remotes::install_github("cboettig/aws.s3")
+          install.packages(c("imputeTS", "tsibble", "fable"))
 
       - name: Update GEFS
         shell: Rscript {0}
