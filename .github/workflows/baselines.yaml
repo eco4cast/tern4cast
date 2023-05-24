@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 
-name: target_generation
+name: baseline_generation
 
 jobs:
   docker:
