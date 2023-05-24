@@ -22,7 +22,7 @@ jobs:
       - name: Install
         shell: Rscript {0}
         run: |
-          install.packages(c("aws.s3"))
+          emotes::install_github("cboettig/aws.s3")
 
       - name: Update GEFS
         shell: Rscript {0}
