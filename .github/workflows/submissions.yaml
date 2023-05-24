@@ -24,6 +24,7 @@ jobs:
         run: |
           remotes::install_github("eco4cast/score4cast")
           remotes::install_github("cboettig/aws.s3")
+          install.packages("here")
 
       - name: Update GEFS
         shell: Rscript {0}

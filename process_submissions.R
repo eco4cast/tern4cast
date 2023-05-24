@@ -1,6 +1,3 @@
-#renv::restore()
-readRenviron("~/.Renviron") # MUST come first
-
 library(tidyverse)
 library(score4cast)
 library(arrow)
