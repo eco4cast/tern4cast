@@ -2,6 +2,8 @@ library(score4cast)
 library(arrow)
 ignore_sigpipe()
 
+endpoint <- "data.ecoforecast.org"
+
 bucket <- arrow::s3_bucket("tern4cast-forecasts",
                            endpoint_override = endpoint,
                            anonymous = TRUE)
@@ -15,7 +17,6 @@ Sys.setenv("AWS_EC2_METADATA_DISABLED"="TRUE")
 Sys.unsetenv("AWS_DEFAULT_REGION")
 options(mc.cores=4L)
 
-endpoint = "data.ecoforecast.org"
 s3_forecasts <- arrow::s3_bucket("tern4cast-forecasts", endpoint_override = endpoint)
 s3_targets <- arrow::s3_bucket("tern4cast-targets", endpoint_override = endpoint)
 ## Publishing Requires AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY set
