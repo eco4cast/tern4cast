@@ -9,7 +9,7 @@ on:
 name: target_generation
 
 jobs:
-  docker:
+  targets:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -18,6 +18,11 @@ jobs:
     container: rocker/geospatial:latest
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Install
+        shell: Rscript {0}
+        run: |
+          install.packages(c("aws.s3"))
 
       - name: Update GEFS
         shell: Rscript {0}

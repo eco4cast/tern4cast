@@ -94,7 +94,6 @@ flux_target_daily <- tern_flux_target_daily
 write_csv(flux_target_daily, "terrestrial_daily-targets.csv.gz")
 
 message("#### Moving forecasts to s3 bucket ####")
-readRenviron("~/.Renviron") # compatible with littler
 #aws.s3::put_object(file = "terrestrial_30min-targets.csv.gz", 
 #                   object = "terrestrial_30min/terrestrial_30min-targets.csv.gz",
 #                   bucket = "neon4cast-targets")
