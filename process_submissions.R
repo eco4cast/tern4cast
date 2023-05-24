@@ -5,6 +5,8 @@ library(tidyverse)
 library(score4cast)
 library(arrow)
 
+source("https://raw.githubusercontent.com/eco4cast/tern4cast/main/R/forecast_output_validator.R")
+
 challenge_prefix <- "tern4cast"
 AWS_DEFAULT_REGION <- "data"
 AWS_S3_ENDPOINT <- "ecoforecast.org"
@@ -63,7 +65,7 @@ if(length(submissions) > 0){
         #if(theme %in% themes & submission_date <= Sys.Date()){
         
         capture.output({
-          valid <- tryCatch(neon4cast::forecast_output_validator(file.path(local_dir,curr_submission)),
+          valid <- tryCatch(forecast_output_validator(file.path(local_dir,curr_submission)),
                             error = function(e) FALSE, 
                             finally = NULL)
         }, file = log_file, type = c("message"))
