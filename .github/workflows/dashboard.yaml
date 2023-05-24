@@ -10,6 +10,11 @@ name: Update & Deploy dashboard
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    container: rocker/geospatial:latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
