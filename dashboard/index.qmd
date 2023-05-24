@@ -2,7 +2,7 @@
 title: "home"
 ---
 
-Welcome the [EFI](https://ecoforecast.org) NEON Forecast Challenge Dashboard.
+Welcome the [EFI](https://ecoforecast.org) TERN Forecast Challenge Dashboard.
 
 This site provides daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using [quarto](https://quarto.org) and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.
 
@@ -17,7 +17,7 @@ library(bsicons)
 ```
 
 
-```{r}
+```{r eval = FALSE}
 combined <- arrow::open_dataset("cache/parquet/")
 
 n_forecasts <- combined |> distinct(model_id, reference_datetime) |> collect() |> nrow()
@@ -27,7 +27,7 @@ last_updated <- Sys.Date()
 
 ```
 
-```{r include = FALSE}
+```{r include = FALSE, eval = FALSE}
 
 layout_column_wrap(
   width = "250px",

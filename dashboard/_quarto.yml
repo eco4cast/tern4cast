@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "EFI NEON Challenge"
+  title: "EFI TERN Challenge"
   page-navigation: true
   repo-url: https://github.com/eco4cast/neon4cast-dashboard
   repo-actions: [edit, issue]
@@ -12,22 +12,9 @@ website:
     background: primary
     search: true
     left:
-      - href: phenology.qmd
-        icon: tree-fill
-      - href: aquatics.qmd
-        icon: droplet
       - href: terrestrial.qmd
         icon: thermometer-half
-      - href: ticks.qmd
-        icon: bug-fill
-      - href: beetles.qmd
-        icon: bug
-      - href: noaa.qmd
-        icon: cloud-rain-fill
-      - href: status.qmd
-        icon: clipboard-pulse
-
-
+        
   page-footer:
     left: "CC-BY"
     right:

@@ -24,16 +24,26 @@ score4cast::ignore_sigpipe()
 ```{r }
 theme <- "terrestrial_daily"
 cutoff <- as.character(Sys.Date() - 30)
-combined <- arrow::open_dataset(glue("cache/parquet/{theme}")) |>
+s3 <- arrow::s3_bucket(glue("tern4cast-forecasts/parquet/{theme}"), endpoint_override = "data.ecoforecast.org", anonymous = TRUE)
+#combined <- arrow::open_dataset(glue("cache/parquet/{theme}")) |>
+combined <- arrow::open_dataset(s3) |>
   filter(date >= cutoff) |> collect()
+
+```
+
+```{r}
+combined |> 
+  filter(model_id == "persistenceRW") |> 
+  filter(reference_datetime == max(combined$reference_datetime)) |> 
+ggplot(aes(x = datetime, y = prediction, group = parameter)) +
+  geom_line() +
+  facet_grid(variable~site_id)
 
 ```
 
 
 
-
-
-```{r}
+```{r eval = FALSE}
 sites <- combined |> distinct(site_id) |> collect() |> slice_head(n= 6) |> pull(site_id)
 ## with at least n observations to compare!
 n_data <- 10
@@ -50,7 +60,7 @@ Below is the latest forecasts for which we have at least 10 observations. Mouse 
 ::: panel-tabset
 ## Latent evaporation
 
-```{r}
+```{r eval = FALSE}
 ex |> filter(reference_datetime == ref, variable == "le") |> forecast_plots()
 ```
 
@@ -58,15 +68,10 @@ ex |> filter(reference_datetime == ref, variable == "le") |> forecast_plots()
 
 Net ecosystem exchange of CO2 (NEE)
 
-```{r}
+```{r eval = FALSE}
 ex |> filter(reference_datetime == ref, variable == "nee") |> forecast_plots()
 ```
 
-## vswc
-
-```{r}
- ex |> filter(reference_datetime == ref, variable == "vswc") |> forecast_plots()
-```
 :::
 
 
@@ -83,21 +88,14 @@ cutoff
 ::: panel-tabset
 ## Latent evaporation
 
-```{r}
+```{r eval = FALSE}
 leaderboard_plots(combined, "le")
 ```
 
 ## CO2 flux
 
-```{r}
+```{r eval = FALSE}
 leaderboard_plots(combined, "nee")
 ```
 
-## vswc
-
-(no data)
-
-```{r}
-# leaderboard_plots(combined, "vswc")
-```
 :::
