@@ -19,7 +19,7 @@ team_name <- "climatology"
 #'Read in target file.  The guess_max is specified because there could be a lot of
 #'NA values at the beginning of the file
 targets <- readr::read_csv("https://data.ecoforecast.org/tern4cast-targets/terrestrial_daily/terrestrial_daily-targets.csv.gz", guess_max = 10000)
-targets <- readr::read_csv("terrestrial_daily-targets.csv.gz", guess_max = 10000)
+#targets <- readr::read_csv("terrestrial_daily-targets.csv.gz", guess_max = 10000)
 
 sites <- read_csv("tern_field_site_metadata.csv",show_col_types = FALSE) |> 
   dplyr::filter(!is.na(data_url))
