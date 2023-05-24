@@ -14,6 +14,11 @@ jobs:
     container: rocker/geospatial:latest
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Install
+        shell: Rscript {0}
+        run: |
+          remotes::install_github("cboettig/aws.s3")
 
       - name: Update GEFS
         shell: Rscript {0}
