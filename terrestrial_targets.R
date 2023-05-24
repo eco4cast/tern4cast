@@ -3,7 +3,6 @@ print(paste0("Running Creating Terrestrial Targets at ", Sys.time()))
 
 library(tidyverse)
 library(lubridate)
-library(contentid)
 library(ncdf4)
 
 sites <- read_csv("tern_field_site_metadata.csv", show_col_types = FALSE) |> 
