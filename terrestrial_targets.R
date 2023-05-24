@@ -91,18 +91,9 @@ flux_target_daily <- tern_flux_target_daily
 
 
 #write_csv(flux_target_30m, "terrestrial_30min-targets.csv.gz")
-write_csv(flux_target_daily, "terrestrial_daily-targets.csv.gz")
+#write_csv(flux_target_daily, "terrestrial_daily-targets.csv.gz")
 
-message("#### Moving forecasts to s3 bucket ####")
-#aws.s3::put_object(file = "terrestrial_30min-targets.csv.gz", 
-#                   object = "terrestrial_30min/terrestrial_30min-targets.csv.gz",
-#                   bucket = "neon4cast-targets")
 
-aws.s3::put_object(file = "terrestrial_daily-targets.csv.gz", 
-                   object = "terrestrial_daily/terrestrial_daily-targets.csv.gz",
-                   bucket = "tern4cast-targets")
-
-#unlink("terrestrial_30min-targets.csv.gz")
-unlink("terrestrial_daily-targets.csv.gz")
-
+s3 <- arrow::s3_bucket("tern4cast-targets/terrestrial_daily", endpoint_override = "data.ecoforecast.org")
+arrow::write_csv_arrow(flux_target_daily, sink = s3$path("terrestrial_daily-targets.csv.gz"))
 

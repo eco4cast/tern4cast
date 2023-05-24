@@ -23,6 +23,11 @@ jobs:
         shell: Rscript {0}
         run: |
           remotes::install_github("eco4cast/score4cast")
+          
+      - name: Build inventory
+        shell: Rscript {0}
+      - run: |
+          score4cast::efi_update_inventory(bucket_name = "tern4cast-forecasts")
 
       - name: Update GEFS
         shell: Rscript {0}
