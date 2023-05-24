@@ -8,7 +8,10 @@ knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
 
 ```{r setup}
 #library(ggiraph)
-library(patchwork)
+install.package(patchwork)
+remotes::install_github("eco4cast/score4cast")
+install.packages("glue")
+
 library(tidyverse)
 #library(neon4cast)
 library(score4cast)
@@ -24,21 +27,18 @@ score4cast::ignore_sigpipe()
 ```{r }
 theme <- "terrestrial_daily"
 cutoff <- as.character(Sys.Date() - 30)
-s3 <- arrow::s3_bucket(glue("tern4cast-forecasts/parquet/{theme}"), endpoint_override = "data.ecoforecast.org", anonymous = TRUE)
-#combined <- arrow::open_dataset(glue("cache/parquet/{theme}")) |>
-combined <- arrow::open_dataset(s3) |>
+combined <- arrow::open_dataset(glue("cache/parquet/{theme}")) |>
   filter(date >= cutoff) |> collect()
-
 ```
 
 ```{r}
 combined |> 
-  filter(model_id == "persistenceRW") |> 
+  filter(variable == "nee") |> 
   filter(reference_datetime == max(combined$reference_datetime)) |> 
-ggplot(aes(x = datetime, y = prediction, group = parameter)) +
-  geom_line() +
-  facet_grid(variable~site_id)
-
+  ggplot(aes(x = datetime)) +
+  geom_ribbon(aes(ymin = quantile_10, ymax = quantile_90, fill = model_id), alpha = 0.5) + 
+  geom_line(aes(y = median)) +
+  facet_wrap(~site_id)
 ```
 
 
