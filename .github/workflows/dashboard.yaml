@@ -27,7 +27,7 @@ jobs:
 
       - name: preload
         run: |
-          R -e 'source("cache.R")'
+          R -e 'source("dashboard/cache.R")'
 
       - name: Cache scores
         id: cache-scores
