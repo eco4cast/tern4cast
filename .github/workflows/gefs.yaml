@@ -22,7 +22,7 @@ jobs:
       - name: Install
         shell: Rscript {0}
         run: |
-          remotes::install_github("eco4cast/gef4cast")
+          remotes::install_github("eco4cast/gefs4cast")
 
       - name: Update GEFS
         shell: Rscript {0}
