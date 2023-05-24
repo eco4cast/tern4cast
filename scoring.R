@@ -18,4 +18,3 @@ s3_prov <- arrow::s3_bucket("tern4cast-prov", endpoint_override = endpoint)
 
 time <- score_theme("terrestrial_daily", s3_forecasts, s3_targets, s3_scores, s3_prov)
 message(paste("terrestrial_daily done in", time[["real"]]))
-
