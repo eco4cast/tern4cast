@@ -19,11 +19,12 @@ team_name <- "climatology"
 #'Read in target file.  The guess_max is specified because there could be a lot of
 #'NA values at the beginning of the file
 targets <- readr::read_csv("https://data.ecoforecast.org/tern4cast-targets/terrestrial_daily/terrestrial_daily-targets.csv.gz", guess_max = 10000)
+targets <- readr::read_csv("terrestrial_daily-targets.csv.gz", guess_max = 10000)
 
-sites <- read_csv("tern_field_site_metadata.csv") |> 
+sites <- read_csv("tern_field_site_metadata.csv",show_col_types = FALSE) |> 
   dplyr::filter(!is.na(data_url))
 
-site_names <- sites$field_site_id
+site_names <- sites$site_id
 
 target_clim <- targets %>%  
   mutate(doy = yday(datetime)) %>% 
@@ -110,7 +111,9 @@ forecast_file <- paste("terrestrial_daily", file_date, "climatology.csv.gz", sep
 
 write_csv(combined, forecast_file)
 
-neon4cast::submit(forecast_file = forecast_file, 
+source("https://raw.githubusercontent.com/eco4cast/tern4cast/main/R/submit.R")
+
+submit(forecast_file = forecast_file, 
                   metadata = NULL, 
                   ask = FALSE)
 

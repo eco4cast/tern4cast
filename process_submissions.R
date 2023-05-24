@@ -4,6 +4,7 @@ readRenviron("~/.Renviron") # MUST come first
 library(tidyverse)
 library(score4cast)
 library(arrow)
+library(glue)
 
 source("https://raw.githubusercontent.com/eco4cast/tern4cast/main/R/forecast_output_validator.R")
 
@@ -14,16 +15,12 @@ endpoint_override <- "data.ecoforecast.org"
 
 message(paste0("Starting Processing Submissions ", Sys.time()))
 
-#remotes::install_deps()
-challenge_config <- yaml::read_yaml("challenge_config.yml")
-## A place to store everything
-
 local_dir <- file.path(here::here(), "submissions")
 unlink(local_dir, recursive = TRUE)
 fs::dir_create(local_dir)
 
 # cannot  set region="" using environmental variables!!
-region <- 
+region <- "data"
 Sys.setenv("AWS_DEFAULT_REGION" = AWS_DEFAULT_REGION,
            "AWS_S3_ENDPOINT" = AWS_S3_ENDPOINT)
 
