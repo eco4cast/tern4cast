@@ -166,9 +166,11 @@ forecast_file <- paste("terrestrial_daily", file_date, "persistenceRW.csv.gz", s
 
 write_csv(RW_forecasts_EFI, forecast_file)
 
-#neon4cast::submit(forecast_file = forecast_file,
-#                  metadata = NULL,
-#                  ask = FALSE)
+source("https://raw.githubusercontent.com/eco4cast/tern4cast/main/R/submit.R")
+
+submit(forecast_file = forecast_file,
+                  metadata = NULL,
+                 ask = FALSE)
 
 unlink(forecast_file)
 
