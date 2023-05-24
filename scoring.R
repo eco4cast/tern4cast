@@ -11,7 +11,7 @@ inventory <- arrow::s3_bucket("tern4cast-inventory",
                               endpoint_override = endpoint,
                               access_key = Sys.getenv("AWS_ACCESS_KEY_ID"),
                               secret_key = Sys.getenv("AWS_SECRET_ACCESS_KEY"))
-score4cast::update_s3_inventory(bucket, inventory)
+score4cast:::update_s3_inventory(bucket, inventory)
 
 Sys.setenv("AWS_EC2_METADATA_DISABLED"="TRUE")
 Sys.unsetenv("AWS_DEFAULT_REGION")
