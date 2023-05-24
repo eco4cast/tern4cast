@@ -18,13 +18,13 @@ read_tern_site <- function(i, sites){
   time <- lubridate::as_datetime("1800-01-01 00:00:00.0") + lubridate::seconds(time * 86400)
   
   co2 <- tibble::tibble(datetime = time,
-                        site_id = sites$`EFI ID`[i],
+                        site_id = sites$site_id[i],
                         variable = "nee",
                         observation = co2) |> 
     mutate(observation = ifelse(observation < -100, NA, observation))
   
   le <- tibble::tibble(datetime = time,
-                       site_id = sites$`EFI ID`[i],
+                       site_id = sites$site_id[i],
                        variable = "le",
                        observation = le) |> 
     mutate(observation = ifelse(observation < -100, NA, observation))
@@ -38,17 +38,17 @@ full_time <- NULL
 
 for(i in 1:nrow(sites)){
   
-  site_targets <- tern_flux_target_30m |> filter(site_id == sites$`EFI ID`[i])
+  site_targets <- tern_flux_target_30m |> filter(site_id == sites$site_id[i])
   
   full_time_vector <- seq(min(c(site_targets$datetime), na.rm = TRUE), 
                           max(c(site_targets$datetime), na.rm = TRUE), 
                           by = "30 min")
   
   df_nee <- tibble(datetime = full_time_vector,
-                   site_id = rep(sites$`EFI ID`[i], length(full_time_vector)),
+                   site_id = rep(sites$site_id[i], length(full_time_vector)),
                    variable = "nee")
   df_le <- tibble(datetime = full_time_vector,
-                  site_id = rep(sites$`EFI ID`[i], length(full_time_vector)),
+                  site_id = rep(sites$site_id[i], length(full_time_vector)),
                   variable = "le")
   full_time <- bind_rows(full_time, df_nee, df_le)
   
@@ -82,7 +82,7 @@ tern_flux_target_daily %>%
 
 ggplot(tern_flux_target_daily, aes(x = datetime, y = observation)) + 
   geom_point() + 
-  facet_wrap(~variable, scale = "free")
+  facet_grid(variable~site_id, scales = "free")
 
 
 flux_target_30m <- tern_flux_target_30m
