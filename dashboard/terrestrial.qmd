@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
 #library(ggiraph)
 #install.packages("remotes")
 #install.package(patchwork)
-#remotes::install_github("eco4cast/score4cast")
+remotes::install_github("eco4cast/score4cast")
 #install.packages("glue")
 
 library(tidyverse)
@@ -28,7 +28,7 @@ score4cast::ignore_sigpipe()
 ```{r}
 theme <- "terrestrial_daily"
 cutoff <- as.character(Sys.Date() - 30)
-combined <- arrow::open_dataset(glue("cache/parquet/{theme}")) |>
+combined <- arrow::open_dataset("/home/rstudio/tern4cast/cache/parquet/terrestrial_daily") |>
   filter(date >= cutoff) |> collect()
 ```
 
@@ -37,8 +37,8 @@ combined |>
   filter(variable == "nee") |> 
   filter(reference_datetime == max(combined$reference_datetime)) |> 
   ggplot(aes(x = datetime)) +
-  geom_ribbon(aes(ymin = quantile_10, ymax = quantile_90, fill = model_id), alpha = 0.5) + 
-  geom_line(aes(y = median)) +
+  geom_ribbon(aes(ymin = quantile10, ymax = quantile90, fill = model_id), alpha = 0.5) + 
+  geom_line(aes(y = median, color = model_id)) +
   facet_wrap(~site_id)
 ```
 

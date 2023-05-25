@@ -8,8 +8,8 @@ This site provides daily updates to visualize recent scores of all forecasts sub
 
 ```{r setup, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
-install.package("tidyverse")
-install.package("arrow")
+#install.package("tidyverse")
+#install.package("arrow")
 library(tidyverse)
 library(arrow)
 #library(bslib)
