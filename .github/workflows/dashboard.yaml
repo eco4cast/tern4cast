@@ -26,15 +26,17 @@ jobs:
       #- uses: r-lib/actions/setup-renv@v2
       
       - name: Install packages
+        shell: Rscript {0}
         run: |
-          R -e 'install.packages(c("remotes", "tidyverse", "glue", "patchwork","arrow"))
-          R -e 'remotes::install_github("eco4cast/score4cast")
-          R -e 'remotes::install_github("cboettig/minio")'
+          install.packages(c("remotes", "tidyverse", "glue", "patchwork","arrow"))
+          remotes::install_github("eco4cast/score4cast")
+          remotes::install_github("cboettig/minio")
           
           
       - name: preload scores
+        shell: Rscript {0}
         run: |
-          R -e 'source("dashboard/cache.R")'
+          source("dashboard/cache.R")
           
 
       - name: Cache scores
