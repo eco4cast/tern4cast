@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: sys deps
-        run: apt-get update -qq && apt-get install -y gh
+        run: apt-get update -qq && apt-get install -y gh jq
 
       - name: install deps
         shell: Rscript {0}
