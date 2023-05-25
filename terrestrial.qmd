@@ -1,0 +1,97 @@
+---
+title: "Terrestrial"
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
+```
+
+```{r setup}
+#library(ggiraph)
+#install.packages("remotes")
+#install.package(patchwork)
+remotes::install_github("eco4cast/score4cast")
+#install.packages("glue")
+
+library(tidyverse)
+#library(neon4cast)
+#library(score4cast)
+library(glue)
+#source("R/plot-utils.R")
+score4cast::ignore_sigpipe()
+
+
+```
+
+# Daily averages
+
+```{r}
+theme <- "terrestrial_daily"
+cutoff <- as.character(Sys.Date() - 30)
+combined <- arrow::open_dataset("/home/rstudio/tern4cast/cache/parquet/terrestrial_daily") |>
+  filter(date >= cutoff) |> collect()
+```
+
+```{r}
+combined |> 
+  filter(variable == "nee") |> 
+  filter(reference_datetime == max(combined$reference_datetime)) |> 
+  ggplot(aes(x = datetime)) +
+  geom_ribbon(aes(ymin = quantile10, ymax = quantile90, fill = model_id), alpha = 0.5) + 
+  geom_line(aes(y = median, color = model_id)) +
+  facet_wrap(~site_id)
+```
+
+```{r eval = FALSE}
+sites <- combined |> distinct(site_id) |> collect() |> slice_head(n= 6) |> pull(site_id)
+## with at least n observations to compare!
+n_data <- 10
+who <- combined |> filter(!is.na(observation)) |> summarise(has_data = max(reference_datetime)) |> collect()
+ref <- as.character ( as.Date(who$has_data[[1]]) - n_data )
+ex <- combined |> filter(reference_datetime == ref, site_id %in% sites) 
+
+```
+
+## Most recent forecasts
+
+Below is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.
+
+::: panel-tabset
+## Latent evaporation
+
+```{r eval = FALSE}
+ex |> filter(reference_datetime == ref, variable == "le") |> forecast_plots()
+```
+
+## CO2 Flux
+
+Net ecosystem exchange of CO2 (NEE)
+
+```{r eval = FALSE}
+ex |> filter(reference_datetime == ref, variable == "nee") |> forecast_plots()
+```
+:::
+
+## Leaderboard
+
+Average skill scores of each model across all sites.\
+Scores are shown by reference date and forecast horizon (in days).\
+Scores are averaged across all submissions of the model with a given horizon or a given `reference_datetime` out of submissions made since cutoff date.
+
+```{r include=TRUE}
+cutoff
+```
+
+::: panel-tabset
+## Latent evaporation
+
+```{r eval = FALSE}
+leaderboard_plots(combined, "le")
+```
+
+## CO2 flux
+
+```{r eval = FALSE}
+leaderboard_plots(combined, "nee")
+```
+:::

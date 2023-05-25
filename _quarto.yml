@@ -5,7 +5,7 @@ project:
 website:
   title: "EFI TERN Challenge"
   page-navigation: true
-  repo-url: https://github.com/eco4cast/neon4cast-dashboard
+  repo-url: https://github.com/eco4cast/tern4cast-dashboard
   repo-actions: [edit, issue]
 
   navbar:
@@ -14,20 +14,20 @@ website:
     left:
       - href: terrestrial.qmd
         icon: thermometer-half
-        
+
   page-footer:
     left: "CC-BY"
     right:
       - icon: github
-        href: https://github.com/eco4cast/neon4cast-dashboard
+        href: https://github.com/eco4cast/tern4cast-dashboard
 
 format:
   html:
     theme: [yeti, custom.scss]
     css: styles.css
     title-block-style: default
-    title-block-banner: "img/2016-09_NIWO_Tower_1620x600.jpg"
-#    title-block-banner-color: white
+    #title-block-banner: "img/2016-09_NIWO_Tower_1620x600.jpg"
+    title-block-banner-color: white
     page-layout: full
     toc: true
 
