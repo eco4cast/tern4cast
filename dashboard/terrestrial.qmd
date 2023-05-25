@@ -8,10 +8,10 @@ knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
 
 ```{r setup}
 #library(ggiraph)
-install.packages("remotes")
-install.package(patchwork)
-remotes::install_github("eco4cast/score4cast")
-install.packages("glue")
+#install.packages("remotes")
+#install.package(patchwork)
+#remotes::install_github("eco4cast/score4cast")
+#install.packages("glue")
 
 library(tidyverse)
 #library(neon4cast)
