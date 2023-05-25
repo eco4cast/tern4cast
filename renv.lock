@@ -746,26 +746,6 @@
         "ncdf4"
       ]
     },
-    "gefs4cast": {
-      "Package": "gefs4cast",
-      "Version": "0.0.1",
-      "Source": "unknown",
-      "Hash": "b5a185dcb072253508f8a5304753aaac",
-      "Requirements": [
-        "arrow",
-        "dplyr",
-        "fs",
-        "glue",
-        "lubridate",
-        "processx",
-        "readr",
-        "stringi",
-        "stringr",
-        "terra",
-        "tibble",
-        "tidyr"
-      ]
-    },
     "generics": {
       "Package": "generics",
       "Version": "0.1.3",
