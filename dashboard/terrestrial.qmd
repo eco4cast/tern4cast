@@ -17,7 +17,7 @@ library(tidyverse)
 #library(neon4cast)
 #library(score4cast)
 library(glue)
-source("R/plot-utils.R")
+#source("R/plot-utils.R")
 score4cast::ignore_sigpipe()
 
 
@@ -41,8 +41,6 @@ combined |>
   geom_line(aes(y = median)) +
   facet_wrap(~site_id)
 ```
-
-
 
 ```{r eval = FALSE}
 sites <- combined |> distinct(site_id) |> collect() |> slice_head(n= 6) |> pull(site_id)
@@ -72,14 +70,12 @@ Net ecosystem exchange of CO2 (NEE)
 ```{r eval = FALSE}
 ex |> filter(reference_datetime == ref, variable == "nee") |> forecast_plots()
 ```
-
 :::
-
 
 ## Leaderboard
 
-Average skill scores of each model across all sites.  
-Scores are shown by reference date and forecast horizon (in days).  
+Average skill scores of each model across all sites.\
+Scores are shown by reference date and forecast horizon (in days).\
 Scores are averaged across all submissions of the model with a given horizon or a given `reference_datetime` out of submissions made since cutoff date.
 
 ```{r include=TRUE}
@@ -98,5 +94,4 @@ leaderboard_plots(combined, "le")
 ```{r eval = FALSE}
 leaderboard_plots(combined, "nee")
 ```
-
 :::
