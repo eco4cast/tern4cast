@@ -31,8 +31,9 @@ jobs:
       - name: Install and activate renv
         run: |
           install.packages("renv")
-          renv::activate(project = "dashboard")
+          renv::activate()
         shell: Rscript {0}
+        working_directory: dashboard
 
       - name: Get R and OS version
         id: get-version
@@ -50,8 +51,9 @@ jobs:
           restore-keys: ${{ steps.get-version.outputs.os-version }}-${{ steps.get-version.outputs.r-version }}-${{inputs.cache-version }}-
 
       - name: Install renv dependencies
-        run: renv::restore()
+        run: renv::restore(project )
         shell: Rscript {0}
+        working_directory: dashboard
 
       - name: Don't use tar 1.30 from Rtools35 to store the cache
         shell: bash
