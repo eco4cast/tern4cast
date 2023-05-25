@@ -1,4 +1,4 @@
-
+install.packages("remotes")
 remotes::install_github("cboettig/minio")
 library(minio)
 install_mc()
