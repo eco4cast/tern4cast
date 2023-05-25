@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE, message=FALSE, warning=FALSE)
 #library(ggiraph)
 #install.packages("remotes")
 #install.package(patchwork)
-remotes::install_github("eco4cast/score4cast")
+#remotes::install_github("eco4cast/score4cast")
 #install.packages("glue")
 
 library(tidyverse)
@@ -28,7 +28,7 @@ score4cast::ignore_sigpipe()
 ```{r}
 theme <- "terrestrial_daily"
 cutoff <- as.character(Sys.Date() - 30)
-combined <- arrow::open_dataset("/home/rstudio/tern4cast/cache/parquet/terrestrial_daily") |>
+combined <- arrow::open_dataset("cache/parquet/terrestrial_daily") |>
   filter(date >= cutoff) |> collect()
 ```
 

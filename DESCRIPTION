@@ -1,0 +1,20 @@
+Package: tern4cast
+Title: TERN Forecast Competition in a Box
+Version: 0.0.0.9000
+Authors@R: c(person(
+              "Carl", "Boettiger", 
+              email = "cboettig@gmail.com", 
+              role = c("aut", "cre"),
+              comment = c(ORCID = "0000-0002-1642-628X")),
+            person("Quinn", "Thomas", role = "aut",
+                   comment = c(ORCID = "0000-0003-1282-7825"))
+            )
+Description: Helper utilities for scoring forecasts.
+License: MIT
+Encoding: UTF-8
+Language: en-US
+Imports: 
+    score4cast
+    gefs4cast
+Remotes: 
+    github::eco4cast/score4cast
