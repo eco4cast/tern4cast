@@ -66,6 +66,8 @@ jobs:
       - name: preload scores
         shell: Rscript {0}
         working-directory: dashboard
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
         run: |
           source("cache.R")
           
