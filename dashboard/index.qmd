@@ -6,8 +6,6 @@ Welcome the [EFI](https://ecoforecast.org) TERN Forecast Challenge Dashboard.
 
 This site provides daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using [quarto](https://quarto.org) and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.
 
-
-
 ```{r setup, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
 install.package("tidyverse")
@@ -17,7 +15,6 @@ library(arrow)
 #library(bslib)
 #library(bsicons)
 ```
-
 
 ```{r eval = FALSE}
 combined <- arrow::open_dataset("cache/parquet/")
@@ -48,15 +45,9 @@ layout_column_wrap(
 
 ```
 
-
 ## Submit a forecast!
 
-EFI currently has five open challenge themes! 
-Browse the current forecasts or submit your own. Learn more about the [current challenges](https://projects.ecoforecast.org/neon4cast-docs).
-
-
-
-
+EFI currently has five open challenge themes! Browse the current forecasts or submit your own. Learn more about the [current challenges](https://projects.ecoforecast.org/neon4cast-docs).
 
 ------------------------------------------------------------------------
 

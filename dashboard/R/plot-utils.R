@@ -1,8 +1,6 @@
 library(ggiraph)
 library(patchwork)
 library(tidyverse)
-library(neon4cast)
-library(score4cast)
 library(glue)
 
 forecast_ggobj <- function(df, ncol = NULL, show.legend = TRUE) {
