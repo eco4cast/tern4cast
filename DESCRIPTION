@@ -18,6 +18,9 @@ Imports:
     gefs4cast,
     minio
     rmarkdown
+    glue
+    tidyverse
+    arrow
 Remotes: 
     github::eco4cast/score4cast,
     github::cboettig/minio
