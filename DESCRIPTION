@@ -14,9 +14,9 @@ License: MIT
 Encoding: UTF-8
 Language: en-US
 Imports: 
-    score4cast
-    gefs4cast
+    score4cast,
+    gefs4cast,
     minio
 Remotes: 
-    github::eco4cast/score4cast
+    github::eco4cast/score4cast,
     github::cboettig/minio
