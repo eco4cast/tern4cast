@@ -15,6 +15,9 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
+      - name: sys deps
+        run: apt-get update -qq && apt-get install -y gh
+
       - name: install deps
         shell: Rscript {0}
         env:
