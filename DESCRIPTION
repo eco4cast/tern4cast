@@ -16,10 +16,10 @@ Language: en-US
 Imports: 
     score4cast,
     gefs4cast,
-    minio
-    rmarkdown
-    glue
-    tidyverse
+    minio,
+    rmarkdown,
+    glue,
+    tidyverse,
     arrow
 Remotes: 
     github::eco4cast/score4cast,
