@@ -15,7 +15,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: preload scores
+      - name: install deps
         shell: Rscript {0}
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
@@ -24,7 +24,6 @@ jobs:
 
       - name: preload scores
         shell: Rscript {0}
-        working-directory: dashboard
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
         run: |
