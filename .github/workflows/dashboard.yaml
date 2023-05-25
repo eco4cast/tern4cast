@@ -51,7 +51,7 @@ jobs:
           restore-keys: ${{ steps.get-version.outputs.os-version }}-${{ steps.get-version.outputs.r-version }}-${{inputs.cache-version }}-
 
       - name: Install renv dependencies
-        run: renv::restore(project )
+        run: renv::restore()
         shell: Rscript {0}
         working-directory: dashboard
 
