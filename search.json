@@ -95,7 +95,7 @@
     "href": "terrestrial.html#leaderboard",
     "title": "Submissions",
     "section": "Leaderboard",
-    "text": "Leaderboard\nAverage skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-04-26\"\n\n\n\nCO2 fluxLatent evaporation"
+    "text": "Leaderboard\nAverage skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n\n\nCO2 fluxLatent evaporation"
   },
   {
     "objectID": "index.html",
