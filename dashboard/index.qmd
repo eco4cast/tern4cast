@@ -24,7 +24,9 @@ last_updated <- Sys.Date()
 
 ```
 
-```{r include = FALSE}
+Page last updated on `r Sys.time()`
+
+```{r}
 
 layout_column_wrap(
   width = "250px",
