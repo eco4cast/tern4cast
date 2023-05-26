@@ -18,7 +18,7 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Install
         shell: Rscript {0}
         run: |
@@ -28,4 +28,4 @@ jobs:
       - name: Update GEFS
         shell: Rscript {0}
         run: |
-          source("run_terrestrial_baselines.R")
+          source("models/run_terrestrial_baselines.R")
