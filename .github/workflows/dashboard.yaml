@@ -16,6 +16,9 @@ jobs:
     container: rocker/geospatial:latest
     steps:
       - uses: actions/checkout@v3
+        with:
+           fetch-depth: 0
+           set-safe-directory: '*'
 
       - name: install deps
         shell: Rscript {0}
