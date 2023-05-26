@@ -1,1 +1,3 @@
-# tern4cast-targets
+# EFI-TERN Ecological Forecasting Challenge
+
+PENDING
