@@ -1,0 +1,35 @@
+{
+  "type": "Catalog",
+  "id": "efi-stac",
+  "title": "EFI-TERN Ecological Foreasting Challenge STAC API",
+  "description": "Searchable spatiotemporal metadata describing forecasts by the EFI-TERN Challenge",
+  "stac_version": "1.0.0",
+  "conformsTo": [
+    "https=//api.stacspec.org/v1.0.0-rc.1/collections",
+    "https=//api.stacspec.org/v1.0.0-rc.1/core"
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "https=//raw.githubusercontent.com/eco4cast/tern4cast/main/stac/catalog.json"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "https=//raw.githubusercontent.com/eco4cast/tern4cast/main/stac/catalog.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "NOAA Global Ensemble Forecast System",
+      "href": "raw.githubusercontent.com/eco4cast/tern4cast/main/stac/collections/noaa.json"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "title": "Aquatics Forecast Challenge",
+      "href": "raw.githubusercontent.com/eco4cast/tern4cast/main/stac/collections/terrestrial.json"
+    }
+  ]
+}
