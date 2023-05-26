@@ -28,7 +28,8 @@ jobs:
         run: |
           quarto render
           git checkout gh-pages
-          git cp -r docs/* .
+          git config --global --add safe.directory '*'
+          cp -r docs/* .
           git commit -a -m "update pages" || echo "nothing to commit"
           git push https://${GITHUB_PAT}:${GITHUB_PAT}@github.com/${GITHUB_REPOSITORY}
 
