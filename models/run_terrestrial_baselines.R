@@ -124,8 +124,9 @@ unlink(forecast_file)
 source('R/fablePersistenceModelFunction.R')
 # 1.Read in the targets data
 # We are not doing a peristence for le right now.
-targets <- readr::read_csv(paste0("https://", config$endpoint, "/", config$targets_bucket, "/terrestrial_daily/terrestrial_daily-targets.csv.gz"), guess_max = 10000) %>%
-  filter(variable == 'nee')
+targets <- readr::read_csv(paste0("https://", config$endpoint, "/", config$targets_bucket, "/terrestrial_daily/terrestrial_daily-targets.csv.gz"), guess_max = 10000)
+#targets <- readr::read_csv(paste0("https://", config$endpoint, "/", config$targets_bucket, "/terrestrial_daily/terrestrial_daily-targets.csv.gz"), guess_max = 10000) %>%
+#  filter(variable == 'nee')
 
 # 2. Make the targets into a tsibble with explicit gaps
 targets_ts <- targets %>%
