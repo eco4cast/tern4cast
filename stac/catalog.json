@@ -28,7 +28,7 @@
     {
       "rel": "child",
       "type": "application/json",
-      "title": "Aquatics Forecast Challenge",
+      "title": "Terrestrial Carbon and Water Fluxes",
       "href": "raw.githubusercontent.com/eco4cast/tern4cast/main/stac/collections/terrestrial.json"
     }
   ]
