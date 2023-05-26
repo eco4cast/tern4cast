@@ -102,7 +102,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Welcome the EFI TERN Forecast Challenge Dashboard.\nThis site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using quarto and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.\nPage last updated on 2023-05-26 16:22:06.54122"
+    "text": "Welcome the EFI TERN Forecast Challenge Dashboard.\nThis site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using quarto and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.\nPage last updated on 2023-05-26 16:40:59.29725"
   },
   {
     "objectID": "index.html#submit-a-forecast",
