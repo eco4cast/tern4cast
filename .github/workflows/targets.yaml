@@ -24,7 +24,7 @@ jobs:
         run: |
           remotes::install_github("cboettig/aws.s3")
 
-      - name: Update GEFS
+      - name: Generate targets
         shell: Rscript {0}
         run: |
           source("targets/terrestrial_targets.R")

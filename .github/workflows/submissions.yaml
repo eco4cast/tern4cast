@@ -26,7 +26,7 @@ jobs:
           remotes::install_github("cboettig/aws.s3")
           install.packages("here")
 
-      - name: Update GEFS
+      - name: Process submissions
         shell: Rscript {0}
         run: |
           source("process_submissions.R")

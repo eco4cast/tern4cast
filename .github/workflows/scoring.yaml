@@ -29,7 +29,7 @@ jobs:
         run: |
           score4cast::efi_update_inventory(bucket_name = "tern4cast-forecasts")
 
-      - name: Update GEFS
+      - name: Generate scores
         shell: Rscript {0}
         run: |
           source("scoring.R")
