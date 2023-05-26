@@ -1,7 +1,7 @@
 {
   "type": "Catalog",
   "id": "efi-stac",
-  "title": "EFI-TERN Ecological Foreasting Challenge STAC API",
+  "title": "EFI-TERN Ecological Forecasting Challenge STAC API",
   "description": "Searchable spatiotemporal metadata describing forecasts by the EFI-TERN Challenge",
   "stac_version": "1.0.0",
   "conformsTo": [
