@@ -28,5 +28,5 @@ jobs:
       - name: Update GEFS
         shell: Rscript {0}
         run: |
-          source("gefs_download.R")
+          source("drivers/gefs_download.R")
 
