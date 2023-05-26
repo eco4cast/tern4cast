@@ -52,6 +52,7 @@ ex <- combined |> filter(reference_datetime == ref, site_id %in% sites)
 Below is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.
 
 ::: panel-tabset
+
 ## CO2 Flux
 
 Net ecosystem exchange of CO2 (NEE)
@@ -73,20 +74,20 @@ Average skill scores of each model across all sites.\
 Scores are shown by reference date and forecast horizon (in days).\
 Scores are averaged across all submissions of the model with a given horizon or a given `reference_datetime` out of submissions made since cutoff date.
 
-```{r include=TRUE}
+```{r include=TRUE, eval = FALSE}
 cutoff
 ```
 
 ::: panel-tabset
 ## **CO2 flux**
 
-```{r}
+```{reval = FALSE}
 leaderboard_plots(combined, "nee")
 ```
 
 ## Latent evaporation
 
-```{r}
+```{r eval = FALSE}
 leaderboard_plots(combined, "le")
 ```
 
