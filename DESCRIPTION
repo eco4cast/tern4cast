@@ -19,7 +19,8 @@ Imports:
     minio,
     rmarkdown,
     glue,
-    tidyverse,
+    dplyr,
+    ggplot2,
     arrow
 Remotes: 
     github::eco4cast/score4cast,
