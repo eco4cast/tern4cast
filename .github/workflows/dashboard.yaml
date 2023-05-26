@@ -31,8 +31,8 @@ jobs:
       - name: Publish
         shell: bash
         run: |
-          git checkout gh-pages
           git config --system --add safe.directory '*'
+          git checkout gh-pages
           chmod -R 777 *
           cp -r docs/* .
           git commit -a -m "update pages" || echo "nothing to commit"
