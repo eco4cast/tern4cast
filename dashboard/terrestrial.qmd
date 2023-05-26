@@ -29,7 +29,7 @@ score4cast::ignore_sigpipe()
 ```{r}
 theme <- "terrestrial_daily"
 cutoff <- as.character(Sys.Date() - 30)
-combined <- arrow::open_dataset("cache/parquet/terrestrial_daily") |>
+combined <- arrow::open_dataset("../cache/parquet/terrestrial_daily") |>
   filter(date >= cutoff) |> collect()
 ```
 
