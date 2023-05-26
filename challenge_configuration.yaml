@@ -1,0 +1,13 @@
+endpoint: data.ecoforecast.org
+scores_bucket: tern4cast-scores
+forecasts_bucket: tern4cast-forecasts
+submissions_bucket: tern4cast-submissions
+inventory_bucket: tern4cast-inventory
+prov_bucket: tern4cast-prov
+targets_bucket: tern4cast-targets
+themes: terrestrial_daily
+theme_datetime_format: "%Y-%m-%d %H:%M:%S"
+example_model_id: test
+site_table: tern_field_site_metadata.csv
+
+
