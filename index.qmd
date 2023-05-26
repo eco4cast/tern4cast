@@ -10,7 +10,7 @@ This site provides daily updates to visualize recent scores of all forecasts sub
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
 #install.package("tidyverse")
 #install.package("arrow")
-library(tidyverse)
+library(dplyr)
 library(arrow)
 #library(bslib)
 #library(bsicons)
