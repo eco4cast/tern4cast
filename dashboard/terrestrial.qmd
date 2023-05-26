@@ -29,12 +29,11 @@ combined <- arrow::open_dataset("../cache/parquet/terrestrial_daily") |>
 
 ```{r}
 combined |> 
-  filter(variable == "nee") |> 
   filter(reference_datetime == max(combined$reference_datetime)) |> 
   ggplot(aes(x = datetime)) +
   geom_ribbon(aes(ymin = quantile10, ymax = quantile90, fill = model_id), alpha = 0.5) + 
   geom_line(aes(y = median, color = model_id)) +
-  facet_wrap(~site_id)
+  facet_grid(variable~site_id, scales = "free_y")
 ```
 
 ```{r eval = FALSE}
@@ -79,9 +78,9 @@ cutoff
 ```
 
 ::: panel-tabset
-## **CO2 flux**
+## CO2 flux
 
-```{reval = FALSE}
+```{r eval = FALSE}
 leaderboard_plots(combined, "nee")
 ```
 
