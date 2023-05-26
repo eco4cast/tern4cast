@@ -30,5 +30,5 @@ Imports:
 Remotes: 
     github::eco4cast/score4cast,
     github::cboettig/minio,
-    github::eco4cast/gefs4cast
+    github::eco4cast/gefs4cast,
     github::cboettig/aws.s3
