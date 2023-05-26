@@ -1,0 +1,1 @@
+Sitemap: https://github.com/eco4cast/tern4cast/sitemap.xml
