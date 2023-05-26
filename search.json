@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "terrestrial.html#most-recent-forecasts",
-    "href": "terrestrial.html#most-recent-forecasts",
-    "title": "Terrestrial",
-    "section": "Most recent forecasts",
-    "text": "Most recent forecasts\nBelow is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.\n\nLatent evaporationCO2 Flux\n\n\n\n\n\n\n\nNet ecosystem exchange of CO2 (NEE)"
-  },
-  {
-    "objectID": "terrestrial.html#leaderboard",
-    "href": "terrestrial.html#leaderboard",
-    "title": "Terrestrial",
-    "section": "Leaderboard",
-    "text": "Leaderboard\nAverage skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-04-26\"\n\n\n\nLatent evaporationCO2 flux"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "home",
@@ -26,5 +12,19 @@
     "title": "home",
     "section": "Submit a forecast!",
     "text": "Submit a forecast!\nEFI currently has five open challenge themes! Browse the current forecasts or submit your own. Learn more about the current challenges.\n\nThis material is based upon work supported by the National Science Foundation under Grant DBI-1942280. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation."
+  },
+  {
+    "objectID": "terrestrial.html#most-recent-forecasts",
+    "href": "terrestrial.html#most-recent-forecasts",
+    "title": "Terrestrial",
+    "section": "Most recent forecasts",
+    "text": "Most recent forecasts\nBelow is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.\n\nLatent evaporationCO2 Flux\n\n\n\n\n\n\n\nNet ecosystem exchange of CO2 (NEE)"
+  },
+  {
+    "objectID": "terrestrial.html#leaderboard",
+    "href": "terrestrial.html#leaderboard",
+    "title": "Terrestrial",
+    "section": "Leaderboard",
+    "text": "Leaderboard\nAverage skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-04-26\"\n\n\n\nLatent evaporationCO2 flux"
   }
 ]
