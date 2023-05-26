@@ -34,11 +34,8 @@ jobs:
           quarto render
 
       - name: Publish
-        shell: bash
         run: |
-          git config --system --add safe.directory '*'
           git checkout gh-pages
-          chmod -R 777 *
           cp -r docs/* .
           git commit -a -m "update pages" || echo "nothing to commit"
           git push https://${GITHUB_PAT}:${GITHUB_PAT}@github.com/${GITHUB_REPOSITORY}
