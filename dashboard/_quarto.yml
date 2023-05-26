@@ -12,8 +12,10 @@ website:
     background: primary
     search: true
     left:
+      - href: instructions.qmd
+        icon: clipboard-pulse
       - href: terrestrial.qmd
-        icon: thermometer-half
+        icon: tree-fill
 
   page-footer:
     left: "CC-BY"
@@ -26,7 +28,7 @@ format:
     theme: [yeti, custom.scss]
     css: styles.css
     title-block-style: default
-    #title-block-banner: "img/2016-09_NIWO_Tower_1620x600.jpg"
+    title-block-banner: "img/tern_header.png"
     title-block-banner-color: white
     page-layout: full
     toc: true

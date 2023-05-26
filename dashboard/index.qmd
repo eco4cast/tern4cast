@@ -4,20 +4,18 @@ title: "home"
 
 Welcome the [EFI](https://ecoforecast.org) TERN Forecast Challenge Dashboard.
 
-This site provides daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using [quarto](https://quarto.org) and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.
+This site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using [quarto](https://quarto.org) and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.
 
 ```{r setup, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
-#install.package("tidyverse")
-#install.package("arrow")
 library(dplyr)
 library(arrow)
-#library(bslib)
-#library(bsicons)
+library(bslib)
+library(bsicons)
 ```
 
-```{r eval = FALSE}
-combined <- arrow::open_dataset("cache/parquet/")
+```{r}
+combined <- arrow::open_dataset("../cache/parquet/")
 
 n_forecasts <- combined |> distinct(model_id, reference_datetime) |> collect() |> nrow()
 n_models <- combined |> distinct(model_id) |> collect() |> nrow()
@@ -26,18 +24,18 @@ last_updated <- Sys.Date()
 
 ```
 
-```{r include = FALSE, eval = FALSE}
+```{r include = FALSE}
 
 layout_column_wrap(
   width = "250px",
   value_box(
-    title = "Total forecasts submitted to the EFI Challenge", 
+    title = "Total forecasts submitted to the EFI TERN Challenge", 
     value = n_forecasts,
     showcase = bs_icon("graph-up"),
     theme_color = "success" 
   ),
   value_box(
-    title = "Unique models submitted to the EFI Challenge", 
+    title = "Unique models submitted to the EFI TERN Challenge", 
     value = n_models,
     showcase = bs_icon("pie-chart")
   )
@@ -47,8 +45,10 @@ layout_column_wrap(
 
 ## Submit a forecast!
 
-EFI currently has five open challenge themes! Browse the current forecasts or submit your own. Learn more about the [current challenges](https://projects.ecoforecast.org/neon4cast-docs).
+EFI TERN currently has one open challenge theme! Browse the current forecasts or submit your own.
 
 ------------------------------------------------------------------------
 
-This material is based upon work supported by the National Science Foundation under Grant DBI-1942280. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+Data was sourced from Terrestrial Ecosystem Research Network (TERN) infrastructure, which is enabled by the Australian Government\'s *National Collaborative Research Infrastructure Strategy* (NCRIS).
+
+This material is based upon work supported by the National Science Foundation under Grant DEB-1926388. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
