@@ -1,30 +1,114 @@
 [
   {
+    "objectID": "instructions.html",
+    "href": "instructions.html",
+    "title": "Instructions",
+    "section": "",
+    "text": "What: Net ecosystem exchange of CO2 and evapotranspiration in terrestrial ecosystems\nWhere: 3 TERN sites across Australia\nWhen: Daily forecasts for at least 30-days in the future are accepted at any time. New forecast submissions are accepted daily. The only requirement is that submissions are predictions of the future at the time the forecast is submitted.\nWhy: Carbon and water cycling are fundamental for climate and water regulation services provided by ecosystems\nWho: Open to any individual or team that registers\nHow: PENDING\nThe video below is an overview of the Terrestrial Carbon and Water Fluxes Challenge that was recorded for the 2021 Early Career Annual Meeting\nWe held a Q&A session on January 22, 2021. You can find a recording from that session HERE."
+  },
+  {
+    "objectID": "instructions.html#overview",
+    "href": "instructions.html#overview",
+    "title": "Instructions",
+    "section": "Overview",
+    "text": "Overview\nThe exchange of water and carbon dioxide between the atmosphere and the land is akin to earth’s terrestrial ecosystems breathing rate and lung capacity. One of the best ways to monitor changes in the amount of carbon and water in an ecosystem is the eddy-covariance method. This method observes the net amount of carbon and water entering and exiting ecosystems at half-hourly timesteps, which is important because it can provide information on ecosystem processes such as photosynthesis, respiration, and transpiration, their sensitivities to ongoing climate and land use change, and greenhouse gas budgets for carbon accounting and natural climate solutions. Forecasts of carbon uptake and release along with water use can provide insights into future production of food, fiber, timber, and carbon credits. Additionally, forecasts will highlight the influence that stress and disturbance have on carbon and water cycling."
+  },
+  {
+    "objectID": "instructions.html#challenge",
+    "href": "instructions.html#challenge",
+    "title": "Instructions",
+    "section": "Challenge",
+    "text": "Challenge\nThis forecasting challenge asks teams to forecast net ecosystem exchange of carbon dioxide (NEE) and latent heat flux of evapotranspiration (LE) across 3 TERN sites with differing climates. Forecasts daily time step over the next 30-days. Weather forecasts from NOAA Global Ensemble Forecast System are provided to use as model drivers (if forecasting model uses meteorological inputs). Forecasts can be submitted daily\nTeams are asked to submit their forecast of measured NEON NEE and LE, along with uncertainty estimates and metadata. Any existing NEE and LE may be used to build and improve the models used to generate forecasts. Other data can be used so long as they are not from the month being forecast and the data are made publicly available (minimum of URL, but ideally a script) and accessible to all teams in the challenge."
+  },
+  {
+    "objectID": "instructions.html#data-targets",
+    "href": "instructions.html#data-targets",
+    "title": "Instructions",
+    "section": "Data: Targets",
+    "text": "Data: Targets\nThe challenge uses the following TERN data products:\nINSERT\nA file with previously released TERN data that has been processed into “targets” is provided below. The same processing will be applied to new data that are used for forecast evaluation. ### Net ecosystem exchange\nDefinition\nNet ecosystem exchange (NEE) is the net movement of carbon dioxide from the atmosphere to the ecosystem. At the 30-minute time resolution it is reported as \\(\\mu\\)mol CO2 m-2 s-1. At the daily time resolution it is reported as g C m-2 day-1. Negative values correspond to an ecosystem absorbing CO2 from the atmosphere, positive values correspond to an ecosystem emitting CO2 to the atmosphere.\nMotivation\nNEE quantifies the net exchange of CO2 between the ecosystem and the atmosphere over that 30-minute or daily time period. Assessing skill at predicting 1/2 hourly - sub daily measurements provides more insight into ability to capture diel processes. The diel curve contains information on how plants and soil immediately respond to variations in meteorology.\nMaking daily predictions will allow us to rapidly assess skill and provide information in a timeframe pertinent to inform and implement natural resource management. It also allows for models that do not produce sub-daily estimates to participate\n\nLatent heat flux\nDefinition\nLatent heat flux is the movement of water as water vapor from the ecosystem to the atmosphere. It is reported as W m-2 (equivalent to J m-2 s-1). At the daily time resolution it is reported as mean W m-2. Positive values correspond to a transfer of water vapor from the ecosystem to the atmosphere.\nMotivation\nLatent heat measures the water loss from an ecosystem to the atmosphere through evapotranspiration (transpiration through plants + evaporation from surfaces).\nForecasting latent heat (evapotranspiration) can provide insights to water stress for plants and the efficiency that plants are using water relative to NEE, and to the amount of liquid water remaining in the soil for soil moisture forecasting\n\n\nFocal sites\nInformation on the sites can be found here:\n\nsite_data <- readr::read_csv(\"https://raw.githubusercontent.com/eco4cast/tern4cast/main/tern_field_site_metadata.csv\") |> \n  dplyr::filter(!is.na(data_url))\n\n\n\ntarget data calculation\nTo create the data for evaluation (and training) for NEE and LE we extract NEE and LE that pass the turbulence quality control flags (qfqm.fluxCo2.turb.qfFinl = 0 ) provided by NEON and has flux values between -50 and 50 umol CO2 m-2 s-1.\nThe table with the half-hour NEE and LE has the following columns\n\ndatetime: YYYY-MM-DD HH:MM for the start of the 30-minute period in UTC\n\nsite_id: NEON site code (e.g., BART)\n\nvariable: nee (umol CO2 m-2 s-1) or le W m-2\n\nobserved: value for variable\n\nTo evaluate daily flux forecasts, we select only days with at least 24 of 48 half hours that pass the quality control flags. For these days, we average the half-hours and convert carbon to daily units (gC/m2/day). The daily data table has the following columns.\n\ndatetime: YYYY-MM-DD (the day is determined using UTC time)\n\nsite_id: NEON site code (e.g., BART)\n\nvariable: nee (g C m-2 day-1) or le (W m-2)\nobservation: value for variable\n\nHere is the download link and format of the terrestrial_daily target file\n\nreadr::read_csv(\"https://data.ecoforecast.org/tern4cast-targets/terrestrial_daily/terrestrial_daily-targets.csv.gz\", guess_max = 1e6) |> \n  na.omit()\n\n# A tibble: 20,561 × 4\n   datetime   site_id variable observation\n   <date>     <chr>   <chr>          <dbl>\n 1 2010-07-30 ACPR    le            48.8  \n 2 2010-07-31 ACPR    le            22.6  \n 3 2010-07-31 ACPR    nee           -0.296\n 4 2010-08-01 ACPR    le            69.6  \n 5 2010-08-01 ACPR    nee           -1.27 \n 6 2010-08-02 ACPR    le            21.1  \n 7 2010-08-02 ACPR    nee           -0.375\n 8 2010-08-03 ACPR    le            15.7  \n 9 2010-08-03 ACPR    nee           -0.563\n10 2010-08-04 ACPR    le             9.48 \n# ℹ 20,551 more rows"
+  },
+  {
+    "objectID": "instructions.html#timeline",
+    "href": "instructions.html#timeline",
+    "title": "Instructions",
+    "section": "Timeline",
+    "text": "Timeline\nForecasts for a minimum of 30 days can be submitted daily. New forecasts can be submitted daily as new weather forecasts and observations (e.g., NEE) become available. The key is that submissions are predictions of the future.\nDaily submissions are allowed and encouraged as new observations and weather forecasts become available, therefore the automation of forecast generation may be ideal. There are many ways to automate scripts that are written to download observations and metreology drivers, generate forecasts, and submit forecasts. Two tools that many have used are cron jobs (see the R package cronR) that execute tasks at user specifics times and github actions.\nCron jobs work on unix and mac systems. An example of a script that executes a cron job using R can be found here."
+  },
+  {
+    "objectID": "instructions.html#flux-data-latency",
+    "href": "instructions.html#flux-data-latency",
+    "title": "Instructions",
+    "section": "Flux data latency",
+    "text": "Flux data latency\nPENDING"
+  },
+  {
+    "objectID": "instructions.html#submissions",
+    "href": "instructions.html#submissions",
+    "title": "Instructions",
+    "section": "Submissions",
+    "text": "Submissions\nThe required names for forecasted variables: nee, and le.\nThe required time unit: YYYY-MM-DD\nADDING MORE HERE"
+  },
+  {
+    "objectID": "instructions.html#meterological-inputs-for-modeling",
+    "href": "instructions.html#meterological-inputs-for-modeling",
+    "title": "Instructions",
+    "section": "Meterological inputs for modeling",
+    "text": "Meterological inputs for modeling\nPENDING"
+  },
+  {
+    "objectID": "instructions.html#useful-functions",
+    "href": "instructions.html#useful-functions",
+    "title": "Instructions",
+    "section": "Useful functions",
+    "text": "Useful functions\nPENDING"
+  },
+  {
+    "objectID": "instructions.html#null-models",
+    "href": "instructions.html#null-models",
+    "title": "Instructions",
+    "section": "Null models",
+    "text": "Null models\nTwo null models are automatically generated each day - these are simple baseline models. The persistence null model uses the most recent measurement of nee or le and predicts that the values will be constant in the future. The climatology null model forecasts that the nee or lee will be equal to the historical mean of that day of year. We apply both the persistence and climatology model to the daily fluxes.\nCode for the daily persistence null model can be found here\nCode for the daily climatology null model can be found here"
+  },
+  {
+    "objectID": "instructions.html#faq",
+    "href": "instructions.html#faq",
+    "title": "Instructions",
+    "section": "FAQ",
+    "text": "FAQ\nPENDING"
+  },
+  {
+    "objectID": "instructions.html#design-team",
+    "href": "instructions.html#design-team",
+    "title": "Instructions",
+    "section": "Design team",
+    "text": "Design team\nTerrestrial Ecosystem Research Network (TERN) has been involved in the design of the challenge. ````"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "home",
     "section": "",
-    "text": "Welcome the EFI TERN Forecast Challenge Dashboard.\nThis site provides daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using quarto and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions."
+    "text": "Welcome the EFI TERN Forecast Challenge Dashboard.\nThis site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using quarto and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions."
   },
   {
     "objectID": "index.html#submit-a-forecast",
     "href": "index.html#submit-a-forecast",
     "title": "home",
     "section": "Submit a forecast!",
-    "text": "Submit a forecast!\nEFI currently has five open challenge themes! Browse the current forecasts or submit your own. Learn more about the current challenges.\n\nThis material is based upon work supported by the National Science Foundation under Grant DBI-1942280. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation."
+    "text": "Submit a forecast!\nEFI TERN currently has one open challenge theme! Browse the current forecasts or submit your own.\n\nData was sourced from Terrestrial Ecosystem Research Network (TERN) infrastructure, which is enabled by the Australian Government's National Collaborative Research Infrastructure Strategy (NCRIS).\nThis material is based upon work supported by the National Science Foundation under Grant DEB-1926388. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation."
   },
   {
     "objectID": "terrestrial.html#most-recent-forecasts",
     "href": "terrestrial.html#most-recent-forecasts",
-    "title": "Terrestrial",
+    "title": "Submissions",
     "section": "Most recent forecasts",
-    "text": "Most recent forecasts\nBelow is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.\n\nLatent evaporationCO2 Flux\n\n\n\n\n\n\n\nNet ecosystem exchange of CO2 (NEE)"
+    "text": "Most recent forecasts\nBelow is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.\n\nCO2 FluxLatent evaporation\n\n\nNet ecosystem exchange of CO2 (NEE)"
   },
   {
     "objectID": "terrestrial.html#leaderboard",
     "href": "terrestrial.html#leaderboard",
-    "title": "Terrestrial",
+    "title": "Submissions",
     "section": "Leaderboard",
-    "text": "Leaderboard\nAverage skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-04-26\"\n\n\n\nLatent evaporationCO2 flux"
+    "text": "Leaderboard\nAverage skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-04-26\"\n\n\n\nCO2 fluxLatent evaporation\n\n\n\n\nNULL\n\n\n\n\n\n\nNULL"
   }
 ]
