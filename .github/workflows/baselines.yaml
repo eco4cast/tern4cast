@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 
-name: baseline_generation
+name: baseline-forecasts
 
 jobs:
   docker:
