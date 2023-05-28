@@ -222,7 +222,7 @@ background-size: cover;
 
 
 <p><strong>What:</strong> Net ecosystem exchange of CO2 and evapotranspiration in terrestrial ecosystems</p>
-<p><strong>Where</strong>: 3 TERN sites across Australia</p>
+<p><strong>Where</strong>: 2 TERN sites in Australia</p>
 <p><strong>When</strong>: Daily forecasts for at least 30-days in the future are accepted at any time. New forecast submissions are accepted daily. The only requirement is that submissions are predictions of the future at the time the forecast is submitted.</p>
 <p><strong>Why:</strong> Carbon and water cycling are fundamental for climate and water regulation services provided by ecosystems</p>
 <p><strong>Who</strong>: Open to any individual or team that registers</p>
@@ -236,7 +236,7 @@ background-size: cover;
 </section>
 <section id="challenge" class="level2">
 <h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
-<p>This forecasting challenge asks teams to forecast net ecosystem exchange of carbon dioxide (NEE) and latent heat flux of evapotranspiration (LE) across 3 TERN sites with differing climates. Forecasts of daily time step over the next 30-days. Weather forecasts from NOAA Global Ensemble Forecast System are provided to use as model drivers (if forecasting model uses meteorological inputs). Forecasts can be submitted daily</p>
+<p>This forecasting challenge asks teams to forecast net ecosystem exchange of carbon dioxide (NEE) and latent heat flux of evapotranspiration (LE) across 2 TERN sites with differing climates. Forecasts of daily time step over the next 30-days. Weather forecasts from NOAA Global Ensemble Forecast System are provided to use as model drivers (if forecasting model uses meteorological inputs). Forecasts can be submitted daily</p>
 <p>Teams are asked to submit their forecast of NEE and LE, along with uncertainty estimates. Any existing NEE and LE may be used to build and improve the forecast models. Other data can be used as inputs to the forecasting model.</p>
 </section>
 <section id="data-targets" class="level2">
@@ -284,7 +284,7 @@ background-size: cover;
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"https://data.ecoforecast.org/tern4cast-targets/terrestrial_daily/terrestrial_daily-targets.csv.gz"</span>, <span class="at">guess_max =</span> <span class="fl">1e6</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 20,573 × 4
+<pre><code># A tibble: 20,577 × 4
    datetime   site_id variable observation
    &lt;date&gt;     &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
  1 2010-07-30 ACPR    le            48.8  
@@ -297,7 +297,7 @@ background-size: cover;
  8 2010-08-03 ACPR    le            15.7  
  9 2010-08-03 ACPR    nee           -0.563
 10 2010-08-04 ACPR    le             9.48 
-# ℹ 20,563 more rows</code></pre>
+# ℹ 20,567 more rows</code></pre>
 </div>
 </div>
 </section>
