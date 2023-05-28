@@ -1,5 +1,5 @@
 site,site_id,fluxnet_id,latitude,longitude,elevation,mat,map,world_ecoregion, data_url
-Alice Springs Mulga,AASM,AU-ASM,-22.2828,133.2493,606,22.8,331,Deserts and xeric shrublands, https://dap.ozflux.org.au/thredds/dodsC/ozflux/sites/AliceSpringsMulga/L3/neon_efi/AliceSpringsMulga_L3_EFI.nc
+Alice Springs Mulga,AASM,AU-ASM,-22.2828,133.2493,606,22.8,331,Deserts and xeric shrublands,
 Boyagin,ABOY,AU-Boy,-32.4771,116.9386,484,,,, https://dap.ozflux.org.au/thredds/dodsC/ozflux/sites/Boyagin/L3/neon_efi/Boyagin_L3_EFI.nc
 Calperum,ACPR,AU-Cpr,-34.0027,140.5877,60,17.9,301,Mediterranean woodlands, https://dap.ozflux.org.au/thredds/dodsC/ozflux/sites/Calperum/L3/neon_efi/Calperum_L3_EFI.nc
 Cumberland Plains,ACUM,AU-Cum,-33.6152,150.7236,20,18.1,806,Temperate woodlands,
