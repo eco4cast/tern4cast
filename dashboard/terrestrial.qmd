@@ -25,6 +25,8 @@ theme <- "terrestrial_daily"
 cutoff <- as.character(Sys.Date() - 30)
 combined <- arrow::open_dataset("../cache/parquet/terrestrial_daily") |>
   filter(date >= cutoff) |> collect()
+  
+print(max(combined$reference_datetime))  
 
 config <- yaml::read_yaml("../challenge_configuration.yaml")
 sites <- readr::read_csv(paste0("../", config$site_table), show_col_types = FALSE) |> 
@@ -32,12 +34,15 @@ sites <- readr::read_csv(paste0("../", config$site_table), show_col_types = FALS
 ```
 
 ```{r}
-combined |> 
+df <- combined |> 
   left_join(sites, by = "site_id") |> 
   filter(site_id %in% sites$site_id) |> 
   mutate(reference_datetime = lubridate::as_datetime(reference_datetime)) |>
   mutate(variable = ifelse(variable == "nee", "Net Ecosystem Exchange\n(gC/m2/day)", variable),
-         variable = ifelse(variable == "le", "Evapotranspiration\n(W/m2)", variable)) %>% 
+         variable = ifelse(variable == "le", "Evapotranspiration\n(W/m2)", variable))
+  print(max(combined$reference_datetime))       
+         
+df |> 
   filter(reference_datetime == max(combined$reference_datetime)) |> 
   ggplot(aes(x = datetime)) +
   geom_ribbon(aes(ymin = quantile10, ymax = quantile90, fill = model_id), alpha = 0.5) + 
