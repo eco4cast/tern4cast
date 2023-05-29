@@ -40,10 +40,11 @@ df <- combined |>
   mutate(reference_datetime = lubridate::as_datetime(reference_datetime)) |>
   mutate(variable = ifelse(variable == "nee", "Net Ecosystem Exchange\n(gC/m2/day)", variable),
          variable = ifelse(variable == "le", "Evapotranspiration\n(W/m2)", variable))
-  print(max(combined$reference_datetime))       
+  print(max(combined$reference_datetime))     
+  print(unique(combined$datetime))
          
 df |> 
-  filter(reference_datetime == max(combined$reference_datetime)) |> 
+  filter(lubridate::as_date(reference_datetime) == max(lubridate::as_date(combined$reference_datetime))) |> 
   ggplot(aes(x = datetime)) +
   geom_ribbon(aes(ymin = quantile10, ymax = quantile90, fill = model_id), alpha = 0.5) + 
   geom_line(aes(y = median, color = model_id)) +
