@@ -35,6 +35,7 @@ sites <- readr::read_csv(paste0("../", config$site_table), show_col_types = FALS
 combined |> 
   left_join(sites, by = "site_id") |> 
   filter(site_id %in% sites$site_id) |> 
+  mutate(reference_datetime = lubridate::as_datetime(reference_datetime)) |>
   mutate(variable = ifelse(variable == "nee", "Net Ecosystem Exchange\n(gC/m2/day)", variable),
          variable = ifelse(variable == "le", "Evapotranspiration\n(W/m2)", variable)) %>% 
   filter(reference_datetime == max(combined$reference_datetime)) |> 
