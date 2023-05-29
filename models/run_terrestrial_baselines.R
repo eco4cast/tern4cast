@@ -140,7 +140,7 @@ site_var_combinations <- expand.grid(site = unique(targets$site_id),
   # assign the transformation depending on the variable. le is logged
   mutate(transformation = 'none') %>%
   mutate(boot_number = 200,
-         h = 36,
+         h = 37,
          bootstrap = T,
          verbose = T)
 

@@ -27,12 +27,14 @@ combined <- arrow::open_dataset("../cache/parquet/terrestrial_daily") |>
   filter(date >= cutoff) |> collect()
 
 config <- yaml::read_yaml("../challenge_configuration.yaml")
-sites <- readr::read_csv(paste0("../", config$site_table), show_col_types = FALSE)
+sites <- readr::read_csv(paste0("../", config$site_table), show_col_types = FALSE) |> 
+  filter(!is.na(data_url))
 ```
 
 ```{r}
 combined |> 
   left_join(sites, by = "site_id") |> 
+  filter(site_id %in% sites$site_id) |> 
   mutate(variable = ifelse(variable == "nee", "Net Ecosystem Exchange\n(gC/m2/day)", variable),
          variable = ifelse(variable == "le", "Evapotranspiration\n(W/m2)", variable)) %>% 
   filter(reference_datetime == max(combined$reference_datetime)) |> 
