@@ -18,7 +18,7 @@ ignore_sigpipe()
 
 ```
 
-# Daily averages
+# Most recent forecasts
 
 ```{r}
 theme <- "terrestrial_daily"
