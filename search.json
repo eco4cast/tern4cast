@@ -91,8 +91,8 @@
     "text": "Design team\nTerrestrial Ecosystem Research Network (TERN) has been involved in the design of the challenge. ````"
   },
   {
-    "objectID": "terrestrial.html#most-recent-forecasts",
-    "href": "terrestrial.html#most-recent-forecasts",
+    "objectID": "terrestrial.html#most-recent-forecasts-1",
+    "href": "terrestrial.html#most-recent-forecasts-1",
     "title": "Submissions",
     "section": "Most recent forecasts",
     "text": "Most recent forecasts\nBelow is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.\n\nCO2 FluxLatent evaporation\n\n\nNet ecosystem exchange of CO2 (NEE)"
@@ -109,7 +109,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Welcome the EFI TERN Forecast Challenge Dashboard.\nThis site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using quarto and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.\nPage last updated on 2023-05-29"
+    "text": "Welcome the EFI TERN Forecast Challenge Dashboard.\nThis site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using quarto and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.\nPage last updated on 2023-05-30"
   },
   {
     "objectID": "index.html#submit-a-forecast",
