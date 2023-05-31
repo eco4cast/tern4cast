@@ -22,7 +22,7 @@ bench::bench_time({ # cirrus ~ 6days for full set
                     bucket = "bio230014-bucket01")
   have_dates <- gsub("reference_datetime=", "", s3$ls())
   missing_dates <- dates[!(as.character(dates) %in% have_dates)]
-  gefs_to_parquet(missing_dates, path = s3, sites = sites)
+  #gefs_to_parquet(missing_dates, path = s3, sites = sites)
 })
 
 dates <- seq(as.Date("2020-09-25"), Sys.Date()-1, by=1)
@@ -36,6 +36,8 @@ bench::bench_time({ #32xlarge
                     bucket = "bio230014-bucket01")
   have_dates <- gsub("reference_datetime=", "", s3$ls())
   missing_dates <- dates[!(as.character(dates) %in% have_dates)]
-  gefs4cast:::gefs_pseudo_measures(missing_dates,  path = s3, sites = sites)
+  
+  print(missing_dates)
+  #gefs4cast:::gefs_pseudo_measures(missing_dates,  path = s3, sites = sites)
 })
 
