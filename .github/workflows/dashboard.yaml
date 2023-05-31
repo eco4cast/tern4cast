@@ -30,12 +30,12 @@ jobs:
         shell: Rscript {0}
         run: source("dashboard/cache.R")
 
-      - name: Cache scores
-        id: cache-scores
-        uses: actions/cache@v3
-        with:
-          path: cache
-          key: ${{ runner.os }}-cache
+      #- name: Cache scores
+      #  id: cache-scores
+      #  uses: actions/cache@v3
+      #  with:
+      #    path: cache
+      #    key: ${{ runner.os }}-cache
 
       - name: Render
         run: |
