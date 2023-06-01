@@ -36,6 +36,7 @@ bench::bench_time({ #32xlarge
                     bucket = "bio230014-bucket01")
   have_dates <- gsub("reference_datetime=", "", s3$ls())
   missing_dates <- dates[!(as.character(dates) %in% have_dates)]
+  missing_dates <- missing_dates[!(as.character(missing_dates) %in% c("2020-09-25","2020-09-26","2021-12-13")]
   
   print(missing_dates)
   gefs4cast:::gefs_pseudo_measures(missing_dates,  path = s3, sites = sites)
