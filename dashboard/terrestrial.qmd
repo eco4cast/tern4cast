@@ -51,7 +51,7 @@ df |>
   theme_bw()
 ```
 
-```{r eval = FALSE}
+```{r}
 sites <- combined |> distinct(site_id) |> collect() |> slice_head(n= 6) |> pull(site_id)
 ## with at least n observations to compare!
 n_data <- 10
@@ -69,13 +69,13 @@ Below is the latest forecasts for which we have at least 10 observations. Mouse 
 
 Net ecosystem exchange of CO2 (NEE)
 
-```{r eval = FALSE}
+```{r}
 ex |> filter(reference_datetime == ref, variable == "nee") |> forecast_plots()
 ```
 
 ## Latent evaporation
 
-```{r eval = FALSE}
+```{r}
 ex |> filter(reference_datetime == ref, variable == "le") |> forecast_plots()
 ```
 :::
@@ -86,20 +86,20 @@ Average skill scores of each model across all sites.\
 Scores are shown by reference date and forecast horizon (in days).\
 Scores are averaged across all submissions of the model with a given horizon or a given `reference_datetime` out of submissions made since cutoff date.
 
-```{r include=TRUE, eval = FALSE}
+```{r include=TRUE}
 cutoff
 ```
 
 ::: panel-tabset
 ## CO2 flux
 
-```{r eval = FALSE}
+```{r}
 leaderboard_plots(combined, "nee")
 ```
 
 ## Latent evaporation
 
-```{r eval = FALSE}
+```{r}
 leaderboard_plots(combined, "le")
 ```
 
