@@ -23,8 +23,9 @@ ignore_sigpipe()
 ```{r}
 theme <- "terrestrial_daily"
 cutoff <- as.character(Sys.Date() - 30)
-combined <- arrow::open_dataset("../cache/parquet/terrestrial_daily") |>
-  filter(date >= cutoff) |> collect()
+combined <- arrow::open_dataset("../cache/parquet/terrestrial_daily") |> 
+  filter(date >= cutoff,
+         site_id %in% c("ABOY", "ACPR")) |> collect()
 
 
 config <- yaml::read_yaml("../challenge_configuration.yaml")
@@ -59,8 +60,6 @@ ref <- as.character ( as.Date(who$has_data[[1]]) - n_data )
 ex <- combined |> filter(reference_datetime == ref, site_id %in% sites) 
 
 ```
-
-## Most recent forecasts
 
 Below is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.
 
