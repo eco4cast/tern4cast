@@ -303,7 +303,7 @@ background-size: cover;
 <h2 class="anchored" data-anchor-id="submissions">Submissions</h2>
 <p>The required names for forecasted variables: <code>nee</code>, and <code>le</code>.</p>
 <p>The required time unit: <code>YYYY-MM-DD</code></p>
-<p>The following provides the requirements for the format of the forecasts that will be submitted. It is important to follow these format guidelines in order for your submitted forecasts to pass a set of internal checks that allow the forecast to be visualized on the <a href="http://shiny.ecoforecast.org/" target="_blank">NEON Ecological Forecast Challenge dashboard</a> and evaluated with the scoring process.</p>
+<p>The following provides the requirements for the format of the forecasts that will be submitted. It is important to follow these format guidelines in order for your submitted forecasts to pass a set of internal checks that allow the forecast to be visualized and scored correctly.</p>
 <section id="steps-to-submitting" class="level3">
 <h3 class="anchored" data-anchor-id="steps-to-submitting">Steps to submitting</h3>
 <p>We provide an overview of the steps for submitting with the details below:</p>
@@ -379,10 +379,10 @@ background-size: cover;
 </section>
 <section id="step-3-submission-process" class="level4">
 <h4 class="anchored" data-anchor-id="step-3-submission-process">Step 3: Submission process</h4>
-<p>Individual forecast (csv, csv.gz, netCDF) files can be uploaded any time.</p>
+<p>Individual forecast files can be uploaded any time.</p>
 <p><strong>The correct file name and format is critical for the automated processing of submissions</strong></p>
-<p>Teams will submit their forecast netCDF or csv files through an R function.</p>
-<p>We have developed a function called <code>submit()</code> in the <code>neon4cast</code> package handles submission process.</p>
+<p>Teams can submit their forecast csv files through an R function.</p>
+<p>We have developed a function called <code>submit()</code> that is avialable in this GitHub repo</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(aws.s3)</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"https://raw.githubusercontent.com/eco4cast/tern4cast/main/R/submit.R"</span>)</span>
@@ -411,7 +411,8 @@ background-size: cover;
 <h2 class="anchored" data-anchor-id="useful-functions">Useful functions</h2>
 <p>We run a validator script when processing the submissions. If your submission does not meet the file standards above, you can run a function that provides information describing potential issues. The forecast file needs to be in your local working directory or you need to provide a full path to the file</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">forecast_output_validator</span>(<span class="st">"phenology-2022-09-01-persistenceRW.csv.gz"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"https://raw.githubusercontent.com/eco4cast/tern4cast/main/R/forecast_output_validator.R"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">forecast_output_validator</span>(<span class="st">"phenology-2022-09-01-persistenceRW.csv.gz"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="null-models" class="level2">
