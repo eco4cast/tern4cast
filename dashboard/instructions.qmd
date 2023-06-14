@@ -100,7 +100,7 @@ The required names for forecasted variables: `nee`, and `le`.
 
 The required time unit: `YYYY-MM-DD`
 
-The following provides the requirements for the format of the forecasts that will be submitted. It is important to follow these format guidelines in order for your submitted forecasts to pass a set of internal checks that allow the forecast to be visualized on the [NEON Ecological Forecast Challenge dashboard](http://shiny.ecoforecast.org/){target="_blank"} and evaluated with the scoring process.
+The following provides the requirements for the format of the forecasts that will be submitted. It is important to follow these format guidelines in order for your submitted forecasts to pass a set of internal checks that allow the forecast to be visualized and scored correctly.
 
 ### Steps to submitting
 
@@ -146,13 +146,13 @@ readr::read_csv("https://data.ecoforecast.org/neon4cast-forecasts/raw/aquatics/a
 
 #### Step 3: Submission process
 
-Individual forecast (csv, csv.gz, netCDF) files can be uploaded any time.
+Individual forecast files can be uploaded any time.
 
 **The correct file name and format is critical for the automated processing of submissions**
 
-Teams will submit their forecast netCDF or csv files through an R function.
+Teams can submit their forecast csv files through an R function.
 
-We have developed a function called `submit()` in the `neon4cast` package handles submission process.
+We have developed a function called `submit()` that is avialable in this GitHub repo
 
 ```{r eval = FALSE}
 library(aws.s3)
@@ -182,6 +182,7 @@ weather <- arrow::open_dataset(s3) |>
 We run a validator script when processing the submissions. If your submission does not meet the file standards above, you can run a function that provides information describing potential issues. The forecast file needs to be in your local working directory or you need to provide a full path to the file
 
 ```{r eval = FALSE}
+source("https://raw.githubusercontent.com/eco4cast/tern4cast/main/R/forecast_output_validator.R")
 forecast_output_validator("phenology-2022-09-01-persistenceRW.csv.gz")
 ```
 
