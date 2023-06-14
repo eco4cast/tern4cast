@@ -1,33 +1,5 @@
 [
   {
-    "objectID": "terrestrial.html",
-    "href": "terrestrial.html",
-    "title": "Submissions",
-    "section": "",
-    "text": "Below is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.\n\nCO2 FluxLatent evaporation\n\n\nNet ecosystem exchange of CO2 (NEE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAverage skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-05-15\"\n\n\n\nCO2 fluxLatent evaporation"
-  },
-  {
-    "objectID": "terrestrial.html#leaderboard",
-    "href": "terrestrial.html#leaderboard",
-    "title": "Submissions",
-    "section": "",
-    "text": "Average skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-05-15\"\n\n\n\nCO2 fluxLatent evaporation"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "Welcome the EFI TERN Forecast Challenge Dashboard.\nThis site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using quarto and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.\nPage last updated on 2023-06-14"
-  },
-  {
-    "objectID": "index.html#submit-a-forecast",
-    "href": "index.html#submit-a-forecast",
-    "title": "Home",
-    "section": "Submit a forecast!",
-    "text": "Submit a forecast!\nEFI TERN currently has one open challenge theme! Browse the current forecasts or submit your own.\n\nData was sourced from Terrestrial Ecosystem Research Network (TERN) infrastructure, which is enabled by the Australian Government's National Collaborative Research Infrastructure Strategy (NCRIS).\nThis material is based upon work supported by the National Science Foundation under Grant DEB-1926388. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation."
-  },
-  {
     "objectID": "instructions.html",
     "href": "instructions.html",
     "title": "Instructions",
@@ -117,5 +89,33 @@
     "title": "Instructions",
     "section": "Design team",
     "text": "Design team\nTerrestrial Ecosystem Research Network (TERN) has been involved in the design of the challenge. ````"
+  },
+  {
+    "objectID": "terrestrial.html",
+    "href": "terrestrial.html",
+    "title": "Submissions",
+    "section": "",
+    "text": "Below is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.\n\nCO2 FluxLatent evaporation\n\n\nNet ecosystem exchange of CO2 (NEE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAverage skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-05-15\"\n\n\n\nCO2 fluxLatent evaporation"
+  },
+  {
+    "objectID": "terrestrial.html#leaderboard",
+    "href": "terrestrial.html#leaderboard",
+    "title": "Submissions",
+    "section": "",
+    "text": "Average skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-05-15\"\n\n\n\nCO2 fluxLatent evaporation"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Welcome the EFI TERN Forecast Challenge Dashboard.\nThis site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using quarto and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.\nPage last updated on 2023-06-14"
+  },
+  {
+    "objectID": "index.html#submit-a-forecast",
+    "href": "index.html#submit-a-forecast",
+    "title": "Home",
+    "section": "Submit a forecast!",
+    "text": "Submit a forecast!\nEFI TERN currently has one open challenge theme! Browse the current forecasts or submit your own.\n\nData was sourced from Terrestrial Ecosystem Research Network (TERN) infrastructure, which is enabled by the Australian Government's National Collaborative Research Infrastructure Strategy (NCRIS).\nThis material is based upon work supported by the National Science Foundation under Grant DEB-1926388. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation."
   }
 ]
