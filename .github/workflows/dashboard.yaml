@@ -28,7 +28,7 @@ jobs:
         
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: prerelease
+          version: 1.4.146
 
       - name: pull scores cache
         shell: Rscript {0}
