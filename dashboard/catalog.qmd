@@ -1,0 +1,3 @@
+# Catalog
+
+The catalog of submitted forecasts and the evaluation of the forecasts ("scores") is available through the [SpatioTemporal Asset Catalogs browswer](https://radiantearth.github.io/stac-browser/#/external/raw.githubusercontent.com/eco4cast/tern4cast/main/stac/catalog.json)
