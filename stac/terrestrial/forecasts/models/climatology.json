@@ -37,7 +37,7 @@
     ]
   },
   "properties": {
-    "description": "pending",
+    "description": "Day of year mean forecast",
     "start_datetime": "2021-05-01",
     "end_datetime": "2023-07-16",
     "providers": [
