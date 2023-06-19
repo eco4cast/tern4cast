@@ -22,12 +22,6 @@
     {
       "rel": "child",
       "type": "application/json",
-      "title": "NOAA Global Ensemble Forecast System",
-      "href": "noaa/collection.json"
-    },
-    {
-      "rel": "child",
-      "type": "application/json",
       "title": "Terrestrial Carbon and Water Fluxes",
       "href": "terrestrial/collection.json"
     }
