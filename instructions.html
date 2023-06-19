@@ -253,6 +253,64 @@ background-size: cover;
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>site_data <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/eco4cast/tern4cast/main/tern_field_site_metadata.csv"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(data_url))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 13%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">site</th>
+<th style="text-align: left;">site_id</th>
+<th style="text-align: left;">fluxnet_id</th>
+<th style="text-align: right;">latitude</th>
+<th style="text-align: right;">longitude</th>
+<th style="text-align: right;">elevation</th>
+<th style="text-align: right;">mat</th>
+<th style="text-align: right;">map</th>
+<th style="text-align: left;">world_ecoregion</th>
+<th style="text-align: left;">data_url</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Boyagin</td>
+<td style="text-align: left;">ABOY</td>
+<td style="text-align: left;">AU-Boy</td>
+<td style="text-align: right;">-32.4771</td>
+<td style="text-align: right;">116.9386</td>
+<td style="text-align: right;">484</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">https://dap.ozflux.org.au/thredds/dodsC/ozflux/sites/Boyagin/L3/neon_efi/Boyagin_L3_EFI.nc</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Calperum</td>
+<td style="text-align: left;">ACPR</td>
+<td style="text-align: left;">AU-Cpr</td>
+<td style="text-align: right;">-34.0027</td>
+<td style="text-align: right;">140.5877</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">17.9</td>
+<td style="text-align: right;">301</td>
+<td style="text-align: left;">Mediterranean woodlands</td>
+<td style="text-align: left;">https://dap.ozflux.org.au/thredds/dodsC/ozflux/sites/Calperum/L3/neon_efi/Calperum_L3_EFI.nc</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </section>
 <section id="target-data-calculation" class="level3">
 <h3 class="anchored" data-anchor-id="target-data-calculation">Target data calculation</h3>
