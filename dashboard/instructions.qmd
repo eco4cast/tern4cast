@@ -66,6 +66,9 @@ Information on the sites can be found here:
 site_data <- readr::read_csv("https://raw.githubusercontent.com/eco4cast/tern4cast/main/tern_field_site_metadata.csv") |> 
   dplyr::filter(!is.na(data_url))
 ```
+```{r echo = FALSE}
+knitr::kable(site_date)
+```
 
 ### Target data calculation
 
