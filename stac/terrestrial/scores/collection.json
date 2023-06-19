@@ -156,7 +156,7 @@
     {
       "name": "date",
       "type": "string",
-      "description": "ISO 8601(ISO 2019) date being predicted; follows CF convention http://cfconventions.org/cf-conventions/cf-conventions.html#time-coordinate.
+      "description": "ISO 8601(ISO 2019) date being predicted; follows CF convention http://cfconventions.org/cf-conventions/cf-conventions.html#time-coordinate."
     }
   ]
 }
