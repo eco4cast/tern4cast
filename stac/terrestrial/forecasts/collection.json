@@ -1,6 +1,6 @@
 {
   "id": "terrestrial-forecasts",
-  "description": "Forecasts contain the raw forecast output from the Terrerstrial forecast theme. These forecast outputs have not been scored. Forecast scores are contained in the 'Scores' collection",
+  "description": "Forecasts contain the raw forecast output from the terrestrial forecast theme. These forecast outputs have not been scored. Forecast scores are contained in the 'Scores' collection",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
@@ -41,18 +41,18 @@
     },
     {
       "rel": "about",
-      "href": "https://projects.ecoforecast.org/neon4cast-catalog/aquatics-catalog.html",
+      "href": "https://projects.ecoforecast.org/tern4cast/instructions.html",
       "type": "text/html",
       "title": "Aquatics Forecast Challenge"
     },
     {
       "rel": "describedby",
-      "href": "https://projects.ecoforecast.org/neon4cast-catalog/aquatics-catalog.html",
+      "href": "https://projects.ecoforecast.org/tern4cast/instructions.html",
       "title": "Organization Landing Page",
       "type": "text/html"
     }
   ],
-  "title": "Ecological Forecasting Initiative - Aquatics Forecasts",
+  "title": "Ecological Forecasting Initiative - TERN Terrestrial Forecasts",
   "extent": {
     "spatial": {
       "bbox": [
@@ -67,7 +67,7 @@
     "temporal": {
       "interval": [
         [
-          "2017-08-27T00:00:00Z",
+          "2023-05-01T00:00:00Z",
           "2023-07-18T00:00:00Z"
         ]
       ]
