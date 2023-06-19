@@ -88,12 +88,10 @@ ex |> filter(reference_datetime == ref, variable == "le") |> forecast_plots()
 ## Leaderboard
 
 Average skill scores of each model across all sites.\
-Scores are shown by reference date and forecast horizon (in days).\
-Scores are averaged across all submissions of the model with a given horizon or a given `reference_datetime` out of submissions made since cutoff date.
 
-```{r include=TRUE}
-cutoff
-```
+Scores are shown by reference date and forecast horizon (in days).\
+
+Scores are averaged across all submissions of the model with a given horizon or a given `reference_datetime` using submissions made since `r cutoff`.\
 
 ::: panel-tabset
 ## CO2 flux
