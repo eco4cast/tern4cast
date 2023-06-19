@@ -1,5 +1,5 @@
 {
-  "description": "pending",
+  "description": "Persistence forecaast as modeled using a random walk",
   "stac_version": "1.0.0",
   "stac_extensions": [],
   "type": "Feature",
@@ -46,19 +46,19 @@
       "rel": "collection",
       "href": "../scores.json",
       "type": "application/json",
-      "title": "Aquatics Scores"
+      "title": "Terrestrial Flux Scores"
     },
     {
       "rel": "root",
       "href": "../../../catalog.json",
       "type": "application/json",
-      "title": "EFI Forecast Catalog"
+      "title": "EFI-TERN Forecast Catalog"
     },
     {
       "rel": "parent",
       "href": "../scores.json",
       "type": "application/json",
-      "title": "Aquatics Scores"
+      "title": "Terestrial Flux Scores"
     },
     {
       "rel": "self",
@@ -78,9 +78,9 @@
   "license": "CC0-1.0",
   "keywords": [
     "Forecasting",
-    "Temperature",
-    "Oxygen",
-    "NEON"
+    "Net Ecosystem Exchange",
+    "Latent Heat Flux",
+    "TERN"
   ],
   "providers": [
     {
