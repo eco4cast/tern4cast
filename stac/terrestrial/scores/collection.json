@@ -101,7 +101,7 @@
     {
       "name": "pubDate",
       "type": "string",
-      "description": Datetime that forecasts was submitted to the forecast submission system.
+      "description": "Datetime that forecasts was submitted to the forecast submission system."
     },
     {
       "name": "observation",
