@@ -84,18 +84,11 @@
     "text": "Design team\nTerrestrial Ecosystem Research Network (TERN) has been involved in the design of the challenge. ````"
   },
   {
-    "objectID": "terrestrial.html",
-    "href": "terrestrial.html",
-    "title": "Submitted forecasts",
-    "section": "",
-    "text": "Below is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.\n\nCO2 FluxLatent evaporation\n\n\nNet ecosystem exchange of CO2 (NEE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAverage skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-05-20\"\n\n\n\nCO2 fluxLatent evaporation"
-  },
-  {
     "objectID": "terrestrial.html#leaderboard",
     "href": "terrestrial.html#leaderboard",
     "title": "Submitted forecasts",
-    "section": "",
-    "text": "Average skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-05-20\"\n\n\n\nCO2 fluxLatent evaporation"
+    "section": "Leaderboard",
+    "text": "Leaderboard\nAverage skill scores of each model across all sites.\nScores are shown by reference date and forecast horizon (in days).\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime out of submissions made since cutoff date.\n\n\n[1] \"2023-05-20\"\n\n\n\nCO2 fluxLatent evaporation"
   },
   {
     "objectID": "index.html",
