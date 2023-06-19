@@ -1,6 +1,6 @@
 {
   "id": "aquatics-scores",
-  "description": "Scores contains the scored forecasts from the Terrestrial forecast theme. These are summarized and scored versions of the raw forecast output. The raw forecasts are located in the 'Forecasts' collection.",
+  "description": "Scores contains the scored forecasts from the terrestrial forecast theme. These are summarized and scored versions of the raw forecast output. The raw forecasts are located in the 'Forecasts' collection.",
   "stac_version": "1.0.0",
   "license": "CC0-1.0",
   "stac_extensions": [
