@@ -61,9 +61,9 @@
     "license": "CC0-1.0",
     "keywords": [
       "Forecasting",
-      "Temperature",
-      "Oxygen",
-      "NEON"
+      "Net Ecosystem Exchange",
+      "Latent Heat Flux",
+      "TERN"
     ]
   },
   "collection": "forecast",
@@ -72,19 +72,19 @@
       "rel": "collection",
       "href": "../collection.json",
       "type": "application/json",
-      "title": "Aquatics Forecasts"
+      "title": "Terrestrial Flux Forecasts"
     },
     {
       "rel": "root",
       "href": "../../../catalog.json",
       "type": "application/json",
-      "title": "EFI Forecast Catalog"
+      "title": "EFI-TERN Forecast Catalog"
     },
     {
       "rel": "parent",
       "href": "../collection.json",
       "type": "application/json",
-      "title": "Aquatics Forecasts"
+      "title": "Terrestrial Flux Forecasts"
     },
     {
       "rel": "self",
@@ -95,7 +95,7 @@
   ],
   "assets": {
     "parquet_items": {
-      "href": "s3://anonymous@bio230014-bucket01/tern4cast-forecasts/parquet/aquatics/model_id=climatology?endpoint_override=sdsc.osn.xsede.org",
+      "href": "s3://anonymous@bio230014-bucket01/tern4cast-forecasts/parquet/terrestrial_daily/model_id=climatology?endpoint_override=sdsc.osn.xsede.org",
       "type": "application/x-parquet",
       "title": "Database Access",
       "description": "Use `arrow` for remote access to the database.\n\n### R\n\n```{r}\n# Copy URL from \"URL for Amazon S3\" button above and save as object named \"url_for_s3\" \n# Use in code below\n\nfcst <- arrow::open_dataset(url_for_s3)\ndf <- fcst |> dplyr::collect()\n\n```\n\nNow use dplyr operations to summarise or subset (if necessary), followed by `dplyr::collect()` to bring this data into R as a `data.frame`.\n"
