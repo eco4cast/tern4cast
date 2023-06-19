@@ -10,6 +10,11 @@
   ],
   "type": "Collection",
   "links": [
+     {
+      "rel": "item",
+      "type": "application/json",
+      "href": "models/climatology.json"
+    },
     {
       "rel": "item",
       "type": "application/json",
