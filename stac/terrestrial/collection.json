@@ -1,0 +1,119 @@
+{
+  "id": "efi-tern-terrestrial",
+  "type": "Collection",
+  "links": [
+    {
+      "rel": "child",
+      "type": "application/json",
+      "href": "forecasts/collection.json",
+      "title": "forecast item"
+    },
+    {
+      "rel": "child",
+      "type": "application/json",
+      "href": "scores/collection.json",
+      "title": "scores item"
+    },
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "../catalog.json",
+      "title": "parent"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "../catalog.json",
+      "title": "root"
+    },
+    {
+      "rel": "self",
+      "type": "application/json",
+      "href": "collection.json",
+      "title": "self"
+    },
+    {
+      "rel": "cite-as",
+      "href": "https://doi.org/10.1002/fee.2616",
+      "title": "citation"
+    },
+    {
+      "rel": "about",
+      "href": "https://projects.ecoforecast.org/tern4cast/terrestrial.html",
+      "type": "text/html",
+      "title": "Terrestrial Flux Forecast Challenge"
+    },
+    {
+      "rel": "describedby",
+      "href": "https://projects.ecoforecast.org/tern4cast/instructions.html",
+      "title": "Organization Landing Page",
+      "type": "text/html"
+    }
+  ],
+  "title": "Ecological Forecasting Initiative - TERN Terrestrial",
+  "assets": {
+    "thumbnail": {
+      "href": "https://calperumchowilla.files.wordpress.com/2016/07/dsc01304-copy.jpeg",
+      "type": "image/JPEG",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "TERN flux site"
+    }
+  },
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          116.9386,
+          -32.4771,
+          140.5877,
+          -34.0027
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-07-19T00:00:00Z",
+          "2023-05-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "CC0-1.0",
+  "keywords": [
+    "Forecasting",
+    "Data",
+    "Ecology"
+  ],
+  "providers": [
+    {
+      "url": "https://data.ecoforecast.org",
+      "name": "Ecoforecast Data",
+      "roles": [
+        "producer",
+        "processor",
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://ecoforecast.org",
+      "name": "Ecoforecast",
+      "roles": [
+        "host"
+      ]
+    }
+  ],
+  "description": "This page contains raw forecasts and forecast scores, which are summarized forecasts with evaluation metrics",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json"
+  ],
+  "publications": {
+    "doi": "https://doi.org/10.1002/fee.2616",
+    "citation": "Thomas, R.Q., C. Boettiger, C.C. Carey, M.C. Dietze, L.R. Johnson, M.A. Kenney, J.S. Mclachlan, J.A. Peters, E.R. Sokol, J.F. Weltzin, A. Willson, W.M. Woelmer, and Challenge Contributors. 2023. The NEON Ecological Forecasting Challenge. Frontiers in Ecology and Environment 21: 112-113"
+  }
+}
