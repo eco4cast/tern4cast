@@ -1,0 +1,104 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [],
+  "type": "Feature",
+  "id": "climatology",
+  "bbox": [
+    -156.6194,
+    17.9696,
+    -66.7987,
+    71.2824
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -156.6194,
+          17.9696
+        ],
+        [
+          -66.7987,
+          17.9696
+        ],
+        [
+          -66.7987,
+          71.2824
+        ],
+        [
+          -156.6194,
+          71.2824
+        ],
+        [
+          -156.6194,
+          17.9696
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "description": "pending",
+    "start_datetime": "2021-05-01",
+    "end_datetime": "2023-07-16",
+    "providers": [
+      {
+        "url": "pending",
+        "name": "pending",
+        "roles": [
+          "producer",
+          "processor",
+          "licensor"
+        ]
+      },
+      {
+        "url": "https://ecoforecast.org",
+        "name": "Ecoforecast Challenge",
+        "roles": [
+          "host"
+        ]
+      }
+    ],
+    "license": "CC0-1.0",
+    "keywords": [
+      "Forecasting",
+      "Temperature",
+      "Oxygen",
+      "NEON"
+    ]
+  },
+  "collection": "forecast",
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Aquatics Forecasts"
+    },
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "EFI Forecast Catalog"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json",
+      "title": "Aquatics Forecasts"
+    },
+    {
+      "rel": "self",
+      "href": "climatology.json",
+      "type": "application/json",
+      "title": "Model Forecast"
+    }
+  ],
+  "assets": {
+    "parquet_items": {
+      "href": "s3://anonymous@bio230014-bucket01/tern4cast-forecasts/parquet/aquatics/model_id=climatology?endpoint_override=sdsc.osn.xsede.org",
+      "type": "application/x-parquet",
+      "title": "Database Access",
+      "description": "Use `arrow` for remote access to the database.\n\n### R\n\n```{r}\n# Copy URL from \"URL for Amazon S3\" button above and save as object named \"url_for_s3\" \n# Use in code below\n\nfcst <- arrow::open_dataset(url_for_s3)\ndf <- fcst |> dplyr::collect()\n\n```\n\nNow use dplyr operations to summarise or subset (if necessary), followed by `dplyr::collect()` to bring this data into R as a `data.frame`.\n"
+    }
+  }
+}
