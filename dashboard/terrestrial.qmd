@@ -56,6 +56,7 @@ sites <- combined |> distinct(site_id) |> collect() |> slice_head(n= 6) |> pull(
 ## with at least n observations to compare!
 
 ref <- Sys.Date() - lubridate::days(30)
+ref <- max(c(ref, min(lubridate::as_date(combined$reference_datetime))))
 
 #n_data <- 10
 #who <- combined |> filter(!is.na(observation)) |> summarise(has_data = max(reference_datetime)) |> collect()
