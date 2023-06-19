@@ -67,7 +67,7 @@ site_data <- readr::read_csv("https://raw.githubusercontent.com/eco4cast/tern4ca
   dplyr::filter(!is.na(data_url))
 ```
 ```{r echo = FALSE}
-knitr::kable(site_date)
+knitr::kable(site_data)
 ```
 
 ### Target data calculation
