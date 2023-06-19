@@ -71,8 +71,8 @@
     "parquet_items": {
       "href": "s3://anonymous@bio230014-bucket01/tern4cast-scores/parquet/terrestrial_daily/model_id=climatology?endpoint_override=sdsc.osn.xsede.org",
       "type": "application/x-parquet",
-      "title": "pending",
-      "description": "Use `arrow` for remote access to the database.\n\n### R\n\n```{r}\n# Copied from \"URL for Amazon S3\" button \nurl_for_s3 <- \"s3://anonymous@neon4cast-scores/parquet/aquatics/model_id=cb_prophet?endpoint_override=data.ecoforecast.org\"\n\nfcst <- arrow::open_dataset(url_for_s3)\ndf <- fcst |> dplyr::collect()\n\n```\n\nNow use dplyr operations to summarise or subset (if necessary), followed by `dplyr::collect()` to bring this data into R as a `data.frame`.\n"
+      "title": "Data access",
+      "description": "Use `arrow` for remote access to the database.\n\n### R\n\n```{r}\n# Copied from \"URL for Amazon S3\" button \nurl_for_s3 <- \"s3://anonymous@bio230014-bucket01/tern4cast-scores/parquet/terrestrial_daily/model_id=climatology?endpoint_override=sdsc.osn.xsede.org\"\n\nfcst <- arrow::open_dataset(url_for_s3)\ndf <- fcst |> dplyr::collect()\n\n```\n\nNow use dplyr operations to summarise or subset (if necessary), followed by `dplyr::collect()` to bring this data into R as a `data.frame`.\n"
     }
   },
   "license": "CC0-1.0",
