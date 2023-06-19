@@ -58,7 +58,7 @@
       "roles": [
         "thumbnail"
       ],
-      "title": "TERN flux site"
+      "title": "TERN Calperum flux site"
     }
   },
   "extent": {
@@ -85,7 +85,8 @@
   "keywords": [
     "Forecasting",
     "Data",
-    "Ecology"
+    "Ecology",
+    "TERN"
   ],
   "providers": [
     {
@@ -102,6 +103,14 @@
       "name": "Ecoforecast",
       "roles": [
         "host"
+      ]
+    },
+    {
+      "url": "https://www.tern.org.au",
+      "name": "Terrestrial Ecosystem Research Network",
+      "roles": [
+        "host",
+        "producer"
       ]
     }
   ],
