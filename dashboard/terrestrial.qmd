@@ -54,14 +54,19 @@ df |>
 ```{r}
 sites <- combined |> distinct(site_id) |> collect() |> slice_head(n= 6) |> pull(site_id)
 ## with at least n observations to compare!
-n_data <- 10
-who <- combined |> filter(!is.na(observation)) |> summarise(has_data = max(reference_datetime)) |> collect()
-ref <- as.character ( as.Date(who$has_data[[1]]) - n_data )
+
+ref <- Sys.Date() - lubridate::days(30)
+
+#n_data <- 10
+#who <- combined |> filter(!is.na(observation)) |> summarise(has_data = max(reference_datetime)) |> collect()
+#ref <- as.character ( as.Date(who$has_data[[1]]) - n_data )
 ex <- combined |> filter(reference_datetime == ref, site_id %in% sites) 
 
 ```
 
-Below is the latest forecasts for which we have at least 10 observations. Mouse over to see the team id, scroll to zoom.
+# Forecast analysis
+
+Below are forecasts submitted 30 days ago and include the observations used to evaluate them. Mouse over to see the team id, scroll to zoom.
 
 ::: panel-tabset
 
