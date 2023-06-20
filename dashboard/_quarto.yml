@@ -17,7 +17,7 @@ website:
       - href: terrestrial.qmd
         icon: tree-fill
       - href: catalog.qmd
-        icon: book-fill
+        icon: book
 
   page-footer:
     left: "CC-BY"
