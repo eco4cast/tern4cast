@@ -26,7 +26,8 @@ Imports:
     bsicons,
     ggiraph,
     patchwork,
-    pak
+    pak,
+    jsonlite
 Remotes: 
     github::eco4cast/score4cast,
     github::cboettig/minio,

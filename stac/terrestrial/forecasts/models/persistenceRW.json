@@ -12,7 +12,7 @@
   "geometry": {
     "type": "Polygon",
     "coordinates": [
-     [
+      [
         [
           116.9386,
           -34.0027
@@ -38,8 +38,8 @@
   },
   "properties": {
     "description": "Persistence forecast as modeled using a random walk",
-    "start_datetime": "2023-05-01",
-    "end_datetime": "2023-07-15",
+    "start_datetime": "2023-05-25",
+    "end_datetime": "2023-07-25",
     "providers": [
       {
         "url": "pending",
@@ -95,7 +95,7 @@
   ],
   "assets": {
     "parquet_items": {
-      "href": "s3://anonymous@bio230014-bucket01/tern4cast-forecasts/parquet/terrestrial_daily/model_id=persistenceRW?endpoint_override=sdsc.osn.xsede.org",
+      "href": "s3://anonymous@tern4cast-forecasts/parquet/terrestrial_daily/model_id=persistenceRW?endpoint_override=data.ecoforecast.org",
       "type": "application/x-parquet",
       "title": "Database Access",
       "description": "Use `arrow` for remote access to the database.\n\n### R\n\n```{r}\n# Copy URL from \"URL for Amazon S3\" button above and save as object named \"url_for_s3\" \n# Use in code below\n\nfcst <- arrow::open_dataset(url_for_s3)\ndf <- fcst |> dplyr::collect()\n\n```\n\nNow use dplyr operations to summarise or subset (if necessary), followed by `dplyr::collect()` to bring this data into R as a `data.frame`.\n"
