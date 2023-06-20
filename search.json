@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Welcome the EFI TERN Forecast Challenge Dashboard.\nThis site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using quarto and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.\nPage last updated on 2023-06-19"
+    "text": "Welcome the EFI TERN Forecast Challenge Dashboard.\nThis site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using quarto and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.\nPage last updated on 2023-06-20"
   },
   {
     "objectID": "index.html#submit-a-forecast",
@@ -25,7 +25,7 @@
     "href": "terrestrial.html#leaderboard",
     "title": "Submitted forecasts",
     "section": "Leaderboard",
-    "text": "Leaderboard\nAverage skill scores of each model across all sites.\n\nScores are shown by reference date and forecast horizon (in days).\n\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime using submissions made since 2023-05-20.\n\n\nCO2 fluxLatent evaporation"
+    "text": "Leaderboard\nAverage skill scores of each model across all sites.\n\nScores are shown by reference date and forecast horizon (in days).\n\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime using submissions made since 2023-05-21.\n\n\nCO2 fluxLatent evaporation"
   },
   {
     "objectID": "instructions.html",
