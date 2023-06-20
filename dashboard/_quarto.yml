@@ -3,9 +3,9 @@ project:
   output-dir: docs
 
 website:
-  title: "EFI TERN Challenge"
+  title: "EFI-TERN Challenge"
   page-navigation: true
-  repo-url: https://github.com/eco4cast/tern4cast-dashboard
+  repo-url: https://github.com/eco4cast/tern4cast
   repo-actions: [edit, issue]
 
   navbar:
@@ -23,7 +23,7 @@ website:
     left: "CC-BY"
     right:
       - icon: github
-        href: https://github.com/eco4cast/tern4cast-dashboard
+        href: https://github.com/eco4cast/tern4cast
 
 format:
   html:
