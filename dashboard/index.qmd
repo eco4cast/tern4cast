@@ -2,7 +2,7 @@
 title: "Home"
 ---
 
-Welcome the [EFI](https://ecoforecast.org) Terrestrial Ecosystem Research Network ([TERN](https://www.tern.org.au)) Ecological Forecasting Challenge dashboard, hosted by the Ecological Forecasting Initiative ([EFI](https://ecoforecast.org))
+Welcome the Terrestrial Ecosystem Research Network ([TERN](https://www.tern.org.au)) Ecological Forecasting Challenge dashboard, hosted by the Ecological Forecasting Initiative ([EFI](https://ecoforecast.org))
 
 This site provides instructions for participation, visualizations of forecast submissions, and a catalog of all submitted forecasts. It is rendered daily using GitHub Actions.
 
