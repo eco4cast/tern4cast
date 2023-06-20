@@ -13,7 +13,7 @@ website:
     search: true
     left:
       - href: instructions.qmd
-        icon: clipboard-pulse
+        icon: info-square
       - href: terrestrial.qmd
         icon: tree-fill
       - href: catalog.qmd
