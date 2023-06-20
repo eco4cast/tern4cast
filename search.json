@@ -4,14 +4,14 @@
     "href": "catalog.html",
     "title": "Catalog",
     "section": "",
-    "text": "Catalog\nThe catalog of submitted forecasts and the evaluation of the forecasts (“scores”) is available through the SpatioTemporal Asset Catalogs browser"
+    "text": "The catalog of submitted forecasts and the evaluation of the forecasts (“scores”) is available through the SpatioTemporal Asset Catalogs browser"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Welcome the EFI Terrestrial Ecosystem Research Network (TERN) Ecological Forecasting Challenge dashboard, hosted by the Ecological Forecasting Initiative (EFI)\nThis site provides instructions for participation, visualizations of forecast submissions, and a catalog of all submitted forecasts. It is rendered daily using GitHub Actions.\nPage last updated on 2023-06-20"
+    "text": "Welcome the Terrestrial Ecosystem Research Network (TERN) Ecological Forecasting Challenge dashboard, hosted by the Ecological Forecasting Initiative (EFI)\nThis site provides instructions for participation, visualizations of forecast submissions, and a catalog of all submitted forecasts. It is rendered daily using GitHub Actions.\nPage last updated on 2023-06-20"
   },
   {
     "objectID": "index.html#submit-a-forecast",
