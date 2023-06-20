@@ -1,7 +1,7 @@
 {
   "type": "Catalog",
   "id": "efi-stac",
-  "title": "EFI-TERN Ecological Forecasting Challenge STAC API",
+  "title": "EFI-TERN Ecological Forecasting Challenge Catalog",
   "description": "Searchable spatiotemporal metadata describing forecasts of data at Australia's Terrestrial Ecosystem Research Network (TERN), hosted by the Ecological Forecasting Initiative (EFI)",
   "stac_version": "1.0.0",
   "conformsTo": [
