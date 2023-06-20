@@ -43,9 +43,6 @@ write_json(x = js,
 
 # Scores
 
-
-# Forecasts
-
 model_jsons <- fs::dir_ls("stac/terrestrial/scores/models/")
 
 current_min <- NULL
@@ -72,7 +69,7 @@ for(i in 1:length(model_jsons)){
              auto_unbox=TRUE)
 }
 
-forecast_json <- "stac/terrestrial/forecasts/collection.json"
+forecast_json <- "stac/terrestrial/scores/collection.json"
 js <- read_json(forecast_json)
 
 js$extent$temporal$interval[[1]][[1]] <- paste0(current_min,'T00:00:00Z')
