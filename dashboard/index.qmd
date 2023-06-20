@@ -2,9 +2,9 @@
 title: "Home"
 ---
 
-Welcome the [EFI](https://ecoforecast.org) TERN Forecast Challenge Dashboard.
+Welcome the [EFI](https://ecoforecast.org) Terrestrial Ecosystem Research Network ([TERN](https://www.tern.org.au)) Ecological Forecasting Challenge dashboard, hosted by the Ecological Forecasting Initiative ([EFI](https://ecoforecast.org))
 
-This site provides instructions for participation and daily updates to visualize recent scores of all forecasts submitted to the challenge. This site is generated using [quarto](https://quarto.org) and should be simple to customize for users familiar with RMarkdown. It is rendered daily using GitHub Actions.
+This site provides instructions for participation, visualizations of forecast submissions, and a catalog of all submitted forecasts. It is rendered daily using GitHub Actions.
 
 ```{r setup, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
@@ -47,7 +47,7 @@ layout_column_wrap(
 
 ## Submit a forecast!
 
-EFI TERN currently has one open challenge theme! Browse the current forecasts or submit your own.
+EFI-TERN Challenge currently has one open challenge theme! Browse the current forecasts or submit your own.
 
 ------------------------------------------------------------------------
 
