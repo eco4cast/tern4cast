@@ -1,5 +1,5 @@
 {
-  "description": "Day of year mean forecast",
+  "description": "Forecasts using the mean and standard deviation of that day-of-year in the observed data",
   "stac_version": "1.0.0",
   "stac_extensions": [],
   "type": "Feature",
@@ -86,7 +86,7 @@
   "providers": [
     {
       "url": "pending",
-      "name": "pending pending",
+      "name": "Quinn Thomas",
       "roles": [
         "producer",
         "processor",
