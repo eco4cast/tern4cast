@@ -94,9 +94,13 @@
     }
   ],
   "assets": {
-    "latest forecast": {
+    "latest_forecast": {
+      "title": "Latest forecast",
       "href": "https://data.ecoforecast.org/tern4cast-pngs/terrestrial_daily-climatology-most_recent.png",
-      "type": "image/png"
+      "type": "image/png",
+       "roles": [
+        "thumbnail"
+      ]
       },
     "parquet_items": {
       "href": "s3://anonymous@tern4cast-forecasts/parquet/terrestrial_daily/model_id=climatology?endpoint_override=data.ecoforecast.org",
