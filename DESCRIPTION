@@ -16,7 +16,7 @@ Language: en-US
 Imports: 
     score4cast,
     gefs4cast,
-    minio,
+    minioclient,
     rmarkdown,
     glue,
     dplyr,
@@ -30,6 +30,6 @@ Imports:
     jsonlite
 Remotes: 
     github::eco4cast/score4cast,
-    github::cboettig/minio,
+    github::cboettig/minioclient,
     github::eco4cast/gefs4cast,
     github::cboettig/aws.s3
