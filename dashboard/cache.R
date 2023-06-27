@@ -1,6 +1,6 @@
 #install.packages("remotes")
 #remotes::install_github("cboettig/minio")
-library(minio)
+library(minioclient)
 install_mc()
 mc_alias_set("efi",  endpoint="data.ecoforecast.org",
              access_key = "", secret_key = "")
