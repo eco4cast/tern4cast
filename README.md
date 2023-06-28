@@ -18,7 +18,7 @@ The following elements of a forecasting challenge workflow are included in this 
   - R script: `scoring.R`
   - GitHub Action: `.github/workflows/scoring.yaml`
 7) Generation of dashboard:
-  - Quarto files: `dashboard/
+  - Quarto files: `dashboard/`
   - GitHub Action: `.github/workflows/dashboard.yaml`
 8) Generation of catalog:
   - R script: `stac/update_stac.R`
