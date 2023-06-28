@@ -26,3 +26,4 @@ The following elements of a forecasting challenge workflow are included in this 
 
 
 
+![](https://esajournals.onlinelibrary.wiley.com/cms/asset/f66911d7-5e46-4d85-af39-43bd36b9a9bd/fee2616-fig-0001-m.jpg)
