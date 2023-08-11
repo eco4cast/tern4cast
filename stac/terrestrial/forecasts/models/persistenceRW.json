@@ -39,7 +39,7 @@
   "properties": {
     "description": "Persistence forecast as modeled using a random walk",
     "start_datetime": "2023-05-25",
-    "end_datetime": "2023-09-15",
+    "end_datetime": "2023-09-16",
     "providers": [
       {
         "url": "pending",
