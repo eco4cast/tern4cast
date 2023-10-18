@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Welcome the Terrestrial Ecosystem Research Network (TERN) Ecological Forecasting Challenge dashboard, hosted by the Ecological Forecasting Initiative (EFI)\nThis site provides instructions for participation, visualizations of forecast submissions, and a catalog of all submitted forecasts. It is rendered daily using GitHub Actions.\nPage last updated on 2023-10-17"
+    "text": "Welcome the Terrestrial Ecosystem Research Network (TERN) Ecological Forecasting Challenge dashboard, hosted by the Ecological Forecasting Initiative (EFI)\nThis site provides instructions for participation, visualizations of forecast submissions, and a catalog of all submitted forecasts. It is rendered daily using GitHub Actions.\nPage last updated on 2023-10-18"
   },
   {
     "objectID": "index.html#submit-a-forecast",
@@ -12,6 +12,13 @@
     "title": "Home",
     "section": "Submit a forecast!",
     "text": "Submit a forecast!\nEFI-TERN Challenge currently has one open challenge theme! Browse the current forecasts or submit your own.\n\nData was sourced from Terrestrial Ecosystem Research Network (TERN) infrastructure, which is enabled by the Australian Government's National Collaborative Research Infrastructure Strategy (NCRIS).\nThis material is based upon work supported by the National Science Foundation under Grant DEB-1926388. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation."
+  },
+  {
+    "objectID": "terrestrial.html#leaderboard",
+    "href": "terrestrial.html#leaderboard",
+    "title": "Submitted forecasts",
+    "section": "Leaderboard",
+    "text": "Leaderboard\nAverage skill scores of each model across all sites.\n\nScores are shown by reference date and forecast horizon (in days).\n\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime using submissions made since 2023-09-18.\n\n\nCO2 fluxLatent evaporation\n\n\n\n\nNULL\n\n\n\n\n\n\nNULL"
   },
   {
     "objectID": "instructions.html",
@@ -96,13 +103,6 @@
     "title": "Instructions",
     "section": "Design team",
     "text": "Design team\nTerrestrial Ecosystem Research Network (TERN) has been involved in the design of the challenge. ````"
-  },
-  {
-    "objectID": "terrestrial.html#leaderboard",
-    "href": "terrestrial.html#leaderboard",
-    "title": "Submitted forecasts",
-    "section": "Leaderboard",
-    "text": "Leaderboard\nAverage skill scores of each model across all sites.\n\nScores are shown by reference date and forecast horizon (in days).\n\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime using submissions made since 2023-09-17.\n\n\nCO2 fluxLatent evaporation\n\n\n\n\nNULL\n\n\n\n\n\n\nNULL"
   },
   {
     "objectID": "catalog.html",
