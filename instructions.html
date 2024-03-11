@@ -334,20 +334,20 @@ background-size: cover;
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"https://data.ecoforecast.org/tern4cast-targets/terrestrial_daily/terrestrial_daily-targets.csv.gz"</span>, <span class="at">guess_max =</span> <span class="fl">1e6</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10,813 × 4
+<pre><code># A tibble: 3,065 × 4
    datetime   site_id variable observation
    &lt;date&gt;     &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
- 1 2010-07-30 ACPR    le            48.8  
- 2 2010-07-31 ACPR    le            22.6  
- 3 2010-07-31 ACPR    nee           -0.296
- 4 2010-08-01 ACPR    le            69.6  
- 5 2010-08-01 ACPR    nee           -1.27 
- 6 2010-08-02 ACPR    le            21.1  
- 7 2010-08-02 ACPR    nee           -0.375
- 8 2010-08-03 ACPR    le            15.7  
- 9 2010-08-03 ACPR    nee           -0.563
-10 2010-08-04 ACPR    le             9.48 
-# ℹ 10,803 more rows</code></pre>
+ 1 2021-09-10 ACPR    le            17.0  
+ 2 2021-09-10 ACPR    nee           -0.930
+ 3 2021-09-11 ACPR    le            12.2  
+ 4 2021-09-11 ACPR    nee           -0.611
+ 5 2021-09-12 ACPR    le            12.9  
+ 6 2021-09-12 ACPR    nee           -0.904
+ 7 2021-09-13 ACPR    le             8.36 
+ 8 2021-09-13 ACPR    nee           -1.81 
+ 9 2021-09-14 ACPR    le             6.13 
+10 2021-09-14 ACPR    nee           -1.98 
+# ℹ 3,055 more rows</code></pre>
 </div>
 </div>
 </section>
