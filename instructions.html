@@ -334,7 +334,7 @@ background-size: cover;
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"https://data.ecoforecast.org/tern4cast-targets/terrestrial_daily/terrestrial_daily-targets.csv.gz"</span>, <span class="at">guess_max =</span> <span class="fl">1e6</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 13,599 x 4
+<pre><code># A tibble: 13,601 × 4
    datetime   site_id variable observation
    &lt;date&gt;     &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
  1 2010-07-30 ACPR    le            48.8  
@@ -347,7 +347,7 @@ background-size: cover;
  8 2010-08-03 ACPR    le            15.7  
  9 2010-08-03 ACPR    nee           -0.563
 10 2010-08-04 ACPR    le             9.48 
-# i 13,589 more rows</code></pre>
+# ℹ 13,591 more rows</code></pre>
 </div>
 </div>
 </section>
@@ -400,42 +400,42 @@ background-size: cover;
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"https://data.ecoforecast.org/neon4cast-forecasts/raw/aquatics/aquatics-2022-11-07-climatology.csv.gz"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 68 x 8
+<pre><code># A tibble: 68 × 8
    datetime   variable    parameter family model_id   reference_datetime site_id
    &lt;date&gt;     &lt;chr&gt;       &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;      &lt;date&gt;             &lt;chr&gt;  
- 1 2022-11-07 temperature mu        normal GLEON_phy~ 2022-11-07         BARC   
- 2 2022-11-07 temperature sigma     normal GLEON_phy~ 2022-11-07         BARC   
- 3 2022-11-08 temperature mu        normal GLEON_phy~ 2022-11-07         BARC   
- 4 2022-11-08 temperature sigma     normal GLEON_phy~ 2022-11-07         BARC   
- 5 2022-11-09 temperature mu        normal GLEON_phy~ 2022-11-07         BARC   
- 6 2022-11-09 temperature sigma     normal GLEON_phy~ 2022-11-07         BARC   
- 7 2022-11-10 temperature mu        normal GLEON_phy~ 2022-11-07         BARC   
- 8 2022-11-10 temperature sigma     normal GLEON_phy~ 2022-11-07         BARC   
- 9 2022-11-11 temperature mu        normal GLEON_phy~ 2022-11-07         BARC   
-10 2022-11-11 temperature sigma     normal GLEON_phy~ 2022-11-07         BARC   
-# i 58 more rows
-# i 1 more variable: prediction &lt;dbl&gt;</code></pre>
+ 1 2022-11-07 temperature mu        normal GLEON_phy… 2022-11-07         BARC   
+ 2 2022-11-07 temperature sigma     normal GLEON_phy… 2022-11-07         BARC   
+ 3 2022-11-08 temperature mu        normal GLEON_phy… 2022-11-07         BARC   
+ 4 2022-11-08 temperature sigma     normal GLEON_phy… 2022-11-07         BARC   
+ 5 2022-11-09 temperature mu        normal GLEON_phy… 2022-11-07         BARC   
+ 6 2022-11-09 temperature sigma     normal GLEON_phy… 2022-11-07         BARC   
+ 7 2022-11-10 temperature mu        normal GLEON_phy… 2022-11-07         BARC   
+ 8 2022-11-10 temperature sigma     normal GLEON_phy… 2022-11-07         BARC   
+ 9 2022-11-11 temperature mu        normal GLEON_phy… 2022-11-07         BARC   
+10 2022-11-11 temperature sigma     normal GLEON_phy… 2022-11-07         BARC   
+# ℹ 58 more rows
+# ℹ 1 more variable: prediction &lt;dbl&gt;</code></pre>
 </div>
 </div>
 <p>For an ensemble (or sample) forecast, the <code>family</code> column uses the word <code>ensemble</code> to design that it is a ensemble forecast and the parameter column is the ensemble member number (<code>1</code>, <code>2</code>, <code>3</code> …)</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"https://data.ecoforecast.org/neon4cast-forecasts/raw/aquatics/aquatics-2022-11-07-persistenceRW.csv.gz"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 523,600 x 8
+<pre><code># A tibble: 523,600 × 8
    model_id      datetime   reference_datetime site_id family parameter variable
    &lt;chr&gt;         &lt;date&gt;     &lt;date&gt;             &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;   
- 1 persistenceRW 2022-11-08 2022-11-07         BARC    ensem~         1 chla    
- 2 persistenceRW 2022-11-09 2022-11-07         BARC    ensem~         1 chla    
- 3 persistenceRW 2022-11-10 2022-11-07         BARC    ensem~         1 chla    
- 4 persistenceRW 2022-11-11 2022-11-07         BARC    ensem~         1 chla    
- 5 persistenceRW 2022-11-12 2022-11-07         BARC    ensem~         1 chla    
- 6 persistenceRW 2022-11-13 2022-11-07         BARC    ensem~         1 chla    
- 7 persistenceRW 2022-11-14 2022-11-07         BARC    ensem~         1 chla    
- 8 persistenceRW 2022-11-15 2022-11-07         BARC    ensem~         1 chla    
- 9 persistenceRW 2022-11-16 2022-11-07         BARC    ensem~         1 chla    
-10 persistenceRW 2022-11-17 2022-11-07         BARC    ensem~         1 chla    
-# i 523,590 more rows
-# i 1 more variable: prediction &lt;dbl&gt;</code></pre>
+ 1 persistenceRW 2022-11-08 2022-11-07         BARC    ensem…         1 chla    
+ 2 persistenceRW 2022-11-09 2022-11-07         BARC    ensem…         1 chla    
+ 3 persistenceRW 2022-11-10 2022-11-07         BARC    ensem…         1 chla    
+ 4 persistenceRW 2022-11-11 2022-11-07         BARC    ensem…         1 chla    
+ 5 persistenceRW 2022-11-12 2022-11-07         BARC    ensem…         1 chla    
+ 6 persistenceRW 2022-11-13 2022-11-07         BARC    ensem…         1 chla    
+ 7 persistenceRW 2022-11-14 2022-11-07         BARC    ensem…         1 chla    
+ 8 persistenceRW 2022-11-15 2022-11-07         BARC    ensem…         1 chla    
+ 9 persistenceRW 2022-11-16 2022-11-07         BARC    ensem…         1 chla    
+10 persistenceRW 2022-11-17 2022-11-07         BARC    ensem…         1 chla    
+# ℹ 523,590 more rows
+# ℹ 1 more variable: prediction &lt;dbl&gt;</code></pre>
 </div>
 </div>
 </section>
