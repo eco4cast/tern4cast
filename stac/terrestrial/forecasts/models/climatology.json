@@ -39,7 +39,7 @@
   "properties": {
     "description": "Forecasts using the mean and standard deviation of that day-of-year in the observed data",
     "start_datetime": "2023-05-25",
-    "end_datetime": "2024-06-25",
+    "end_datetime": "2024-06-26",
     "providers": [
       {
         "url": "pending",
