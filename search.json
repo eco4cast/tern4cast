@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Welcome the Terrestrial Ecosystem Research Network (TERN) Ecological Forecasting Challenge dashboard, hosted by the Ecological Forecasting Initiative (EFI)\nThis site provides instructions for participation, visualizations of forecast submissions, and a catalog of all submitted forecasts. It is rendered daily using GitHub Actions.\nPage last updated on 2024-08-30"
+    "text": "Welcome the Terrestrial Ecosystem Research Network (TERN) Ecological Forecasting Challenge dashboard, hosted by the Ecological Forecasting Initiative (EFI)\nThis site provides instructions for participation, visualizations of forecast submissions, and a catalog of all submitted forecasts. It is rendered daily using GitHub Actions.\nPage last updated on 2024-08-31"
   },
   {
     "objectID": "index.html#submit-a-forecast",
@@ -109,6 +109,6 @@
     "href": "terrestrial.html#leaderboard",
     "title": "Submitted forecasts",
     "section": "Leaderboard",
-    "text": "Leaderboard\nAverage skill scores of each model across all sites.\n\nScores are shown by reference date and forecast horizon (in days).\n\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime using submissions made since 2024-07-31.\n\n\nCO2 fluxLatent evaporation\n\n\n\n\nNULL\n\n\n\n\n\n\nNULL"
+    "text": "Leaderboard\nAverage skill scores of each model across all sites.\n\nScores are shown by reference date and forecast horizon (in days).\n\nScores are averaged across all submissions of the model with a given horizon or a given reference_datetime using submissions made since 2024-08-01.\n\n\nCO2 fluxLatent evaporation\n\n\n\n\nNULL\n\n\n\n\n\n\nNULL"
   }
 ]
